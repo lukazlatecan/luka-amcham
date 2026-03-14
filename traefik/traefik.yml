@@ -1,0 +1,28 @@
+# traefik/traefik.yml
+# Static configuration for Traefik v3
+# Replace <YOUR_EMAIL> with a real email address for Let's Encrypt notifications
+
+api:
+  dashboard: false
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: <YOUR_EMAIL>
+      storage: /acme.json
+      httpChallenge:
+        entryPoint: web
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: proxy
+
+log:
+  level: INFO
