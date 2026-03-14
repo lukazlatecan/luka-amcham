@@ -16,6 +16,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
+      # Read-only socket for service discovery; Traefik does not manage containers
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./traefik/traefik.yml:/traefik.yml:ro
       - ./traefik/acme.json:/acme.json
@@ -71,6 +72,7 @@ services:
     environment:
       DOCKER_CONFIG: /config
     volumes:
+      # Write access required — Watchtower stops/restarts containers on new image
       - /var/run/docker.sock:/var/run/docker.sock
       - /root/.docker:/config:ro
     networks:
