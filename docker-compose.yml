@@ -1,0 +1,84 @@
+# docker-compose.yml
+# Deployment stack for luka-young
+# Requires:
+#   - docker network create proxy  (run once on server)
+#   - traefik/acme.json            (touch + chmod 600)
+#   - auth/htpasswd                (generated via httpd:alpine)
+#   - /root/.docker/config.json    (docker login registry.amcham.indigo.si)
+
+services:
+
+  traefik:
+    image: traefik:v3
+    restart: unless-stopped
+    command: --configFile=/traefik.yml
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/traefik.yml:/traefik.yml:ro
+      - ./traefik/acme.json:/acme.json
+    networks:
+      - proxy
+    labels:
+      # Global HTTP→HTTPS redirect middleware (Traefik v3 approach)
+      - "traefik.enable=true"
+      - "traefik.http.routers.http-catchall.rule=HostRegexp(`.+`)"
+      - "traefik.http.routers.http-catchall.entrypoints=web"
+      - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
+      - "traefik.http.routers.http-catchall.service=noop@internal"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+
+  registry:
+    image: registry:2
+    restart: unless-stopped
+    environment:
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+      REGISTRY_STORAGE_DELETE_ENABLED: "true"
+    volumes:
+      - registry_data:/var/lib/registry
+      - ./auth:/auth:ro
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.registry.rule=Host(`registry.amcham.indigo.si`)"
+      - "traefik.http.routers.registry.entrypoints=websecure"
+      - "traefik.http.routers.registry.tls.certresolver=letsencrypt"
+      - "traefik.http.services.registry.loadbalancer.server.port=5000"
+
+  luka-young:
+    image: registry.amcham.indigo.si/luka-young:latest
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.luka-young.rule=Host(`amcham.indigo.si`)"
+      - "traefik.http.routers.luka-young.entrypoints=websecure"
+      - "traefik.http.routers.luka-young.tls.certresolver=letsencrypt"
+      - "traefik.http.services.luka-young.loadbalancer.server.port=3000"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  watchtower:
+    image: containrrr/watchtower
+    restart: unless-stopped
+    command: --label-enable --interval 300
+    environment:
+      DOCKER_CONFIG: /config
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker:/config:ro
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  registry_data:
