@@ -1,19 +1,46 @@
-import { Button } from "@/components/ui/button"
+"use client"
+
+import { LanguageProvider } from "@/components/language-provider"
+import { LoadingScreen } from "@/components/loading-screen"
+import { Navbar } from "@/components/navbar"
+import { Hero } from "@/components/hero"
+import { ImpactMetrics } from "@/components/impact-metrics"
+import { CoreNarrative } from "@/components/core-narrative"
+import { WhatIBuild } from "@/components/what-i-build"
+import { Timeline } from "@/components/timeline"
+import { HowILead } from "@/components/how-i-lead"
+import { Testimonials } from "@/components/testimonials"
+import { Endorsements } from "@/components/endorsements"
+import { WhyAmCham } from "@/components/why-amcham"
+import { FirstYearPlan } from "@/components/first-year-plan"
+import { VideoSection } from "@/components/video-section"
+import { BeyondWork } from "@/components/beyond-work"
+import { PersonalNote } from "@/components/personal-note"
+import { FinalCTA } from "@/components/final-cta"
+import { StarField } from "@/components/star-field"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <LanguageProvider>
+      <LoadingScreen />
+      <StarField />
+      <Navbar />
+      <main>
+        <Hero />
+        <ImpactMetrics />
+        <CoreNarrative />
+        <WhatIBuild />
+        <Timeline />
+        <HowILead />
+        <Testimonials />
+        <Endorsements />
+        <WhyAmCham />
+        <FirstYearPlan />
+        <VideoSection />
+        <BeyondWork />
+        <PersonalNote />
+        <FinalCTA />
+      </main>
+    </LanguageProvider>
   )
 }
