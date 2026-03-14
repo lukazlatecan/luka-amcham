@@ -71,6 +71,7 @@ services:
     command: --label-enable --interval 300
     environment:
       DOCKER_CONFIG: /config
+      DOCKER_API_VERSION: "1.45"
     volumes:
       # Write access required — Watchtower stops/restarts containers on new image
       - /var/run/docker.sock:/var/run/docker.sock
