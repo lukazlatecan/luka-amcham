@@ -44,11 +44,18 @@ interface MetricCardProps {
   suffix?: string
 }
 
-function MetricCard({ value, label, isNumeric, index, parentInView, suffix = "" }: MetricCardProps) {
+function MetricCard({
+  value,
+  label,
+  isNumeric,
+  index,
+  parentInView,
+  suffix = "",
+}: MetricCardProps) {
   const count = useCountUp(
     isNumeric ? (value as number) : 0,
     1200 + index * 150,
-    parentInView && isNumeric,
+    parentInView && isNumeric
   )
 
   const [textVisible, setTextVisible] = useState(false)
@@ -71,7 +78,11 @@ function MetricCard({ value, label, isNumeric, index, parentInView, suffix = "" 
     >
       <div
         className={`text-5xl font-bold text-teal transition-all duration-600 ${
-          isNumeric ? "opacity-100" : textVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+          isNumeric
+            ? "opacity-100"
+            : textVisible
+              ? "scale-100 opacity-100"
+              : "scale-90 opacity-0"
         }`}
         style={{ textShadow: "0 0 30px rgba(79,207,192,0.4)" }}
       >
@@ -91,29 +102,44 @@ export function ImpactMetrics() {
   })
 
   const metrics = [
-    { value: 4, label: t.metrics.companies[locale], isNumeric: true, suffix: "" },
+    {
+      value: 4,
+      label: t.metrics.companies[locale],
+      isNumeric: true,
+      suffix: "",
+    },
     { value: 10, label: t.metrics.years[locale], isNumeric: true, suffix: "+" },
-    { value: 15, label: locale === "en" ? "People I lead" : "Ljudi, ki jih vodim", isNumeric: true, suffix: "+" },
-    { value: 6, label: locale === "en" ? "Awards won" : "Prejetih nagrad", isNumeric: true, suffix: "" },
+    {
+      value: 15,
+      label: locale === "en" ? "People I lead" : "Ljudi, ki jih vodim",
+      isNumeric: true,
+      suffix: "+",
+    },
+    {
+      value: 6,
+      label: locale === "en" ? "Awards won" : "Prejetih nagrad",
+      isNumeric: true,
+      suffix: "",
+    },
   ]
 
   return (
     <section ref={ref} className="w-full py-14">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="mx-auto max-w-5xl px-6">
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <span className="inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
+          <span className="inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
             {t.metrics.title[locale]}
           </span>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {metrics.map((metric, i) => (
             <MetricCard
               key={i}

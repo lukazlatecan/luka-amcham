@@ -49,9 +49,10 @@ export function FinalCTA() {
           className="absolute h-[500px] w-[500px]"
         >
           <div
-            className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo"
+            className="absolute top-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo"
             style={{
-              boxShadow: "0 0 12px rgba(240,76,92,0.9), 0 0 24px rgba(240,76,92,0.4)",
+              boxShadow:
+                "0 0 12px rgba(240,76,92,0.9), 0 0 24px rgba(240,76,92,0.4)",
             }}
           />
         </motion.div>
@@ -63,9 +64,10 @@ export function FinalCTA() {
           className="absolute h-[700px] w-[700px]"
         >
           <div
-            className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral"
+            className="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral"
             style={{
-              boxShadow: "0 0 10px rgba(240,76,92,0.8), 0 0 20px rgba(240,76,92,0.3)",
+              boxShadow:
+                "0 0 10px rgba(240,76,92,0.8), 0 0 20px rgba(240,76,92,0.3)",
             }}
           />
         </motion.div>
@@ -77,9 +79,10 @@ export function FinalCTA() {
           className="absolute h-[320px] w-[320px]"
         >
           <div
-            className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal"
+            className="absolute top-0 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal"
             style={{
-              boxShadow: "0 0 10px rgba(79,207,192,0.9), 0 0 20px rgba(79,207,192,0.4)",
+              boxShadow:
+                "0 0 10px rgba(79,207,192,0.9), 0 0 20px rgba(79,207,192,0.4)",
             }}
           />
         </motion.div>
@@ -94,7 +97,7 @@ export function FinalCTA() {
       >
         {/* Badge */}
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-          <span className="inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-teal">
+          <span className="inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-teal uppercase">
             Contact
           </span>
         </motion.div>
@@ -111,7 +114,7 @@ export function FinalCTA() {
         {/* Quote */}
         <motion.p
           variants={fadeUp}
-          className="mb-10 text-base italic leading-relaxed text-text-muted"
+          className="mb-10 text-base leading-relaxed text-text-muted italic"
         >
           &ldquo;{t.personal.text[locale]}&rdquo;
         </motion.p>
@@ -126,7 +129,10 @@ export function FinalCTA() {
             href="/cv.pdf"
             download
             className="group relative inline-flex min-w-[200px] items-center justify-center gap-2.5 overflow-hidden rounded-xl bg-coral px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
-            style={{ boxShadow: "0 4px 24px rgba(240,76,92,0.35), 0 0 60px rgba(240,76,92,0.15)" }}
+            style={{
+              boxShadow:
+                "0 4px 24px rgba(240,76,92,0.35), 0 0 60px rgba(240,76,92,0.15)",
+            }}
           >
             {/* Icon */}
             <svg
@@ -154,7 +160,10 @@ export function FinalCTA() {
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex min-w-[200px] items-center justify-center gap-2.5 overflow-hidden rounded-xl bg-teal px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
-            style={{ boxShadow: "0 4px 24px rgba(79,207,192,0.35), 0 0 60px rgba(79,207,192,0.15)" }}
+            style={{
+              boxShadow:
+                "0 4px 24px rgba(79,207,192,0.35), 0 0 60px rgba(79,207,192,0.15)",
+            }}
           >
             {/* LinkedIn icon */}
             <svg

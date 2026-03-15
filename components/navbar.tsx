@@ -55,7 +55,7 @@ function MobileDrawer({
           {/* Drawer panel */}
           <motion.div
             key="drawer"
-            className="fixed right-0 top-0 bottom-0 z-50 flex w-[min(320px,85vw)] flex-col border-l border-border bg-bg/97 px-8 pb-10 pt-20 backdrop-blur-2xl"
+            className="fixed top-0 right-0 bottom-0 z-50 flex w-[min(320px,85vw)] flex-col border-l border-border bg-bg/97 px-8 pt-20 pb-10 backdrop-blur-2xl"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -95,7 +95,7 @@ function MobileDrawer({
                 <button
                   key={l}
                   onClick={() => setLocale(l)}
-                  className={`cursor-pointer rounded-lg border px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] transition-all ${
+                  className={`cursor-pointer rounded-lg border px-4 py-2 font-mono text-xs tracking-[0.18em] uppercase transition-all ${
                     l === locale
                       ? "border-teal/60 bg-teal/18 text-teal"
                       : "border-border bg-transparent text-text-muted hover:border-teal/30 hover:text-text-dim"
@@ -111,7 +111,7 @@ function MobileDrawer({
             <button
               onClick={onClose}
               aria-label="Close menu"
-              className="absolute right-6 top-6 flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-border bg-surface text-text-muted transition-colors hover:border-teal/30 hover:text-teal"
+              className="absolute top-6 right-6 flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-border bg-surface text-text-muted transition-colors hover:border-teal/30 hover:text-teal"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path
@@ -153,7 +153,7 @@ export function Navbar() {
         ([entry]) => {
           if (entry.isIntersecting) setActiveSection(id)
         },
-        { rootMargin: "-40% 0px -50% 0px" },
+        { rootMargin: "-40% 0px -50% 0px" }
       )
       obs.observe(el)
       return obs
@@ -164,7 +164,7 @@ export function Navbar() {
   return (
     <>
       <motion.header
-        className="fixed top-0 left-0 right-0 z-30 px-6 md:px-12"
+        className="fixed top-0 right-0 left-0 z-30 px-6 md:px-12"
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.65, ease: [0.23, 1, 0.32, 1], delay: 0.1 }}
@@ -194,8 +194,7 @@ export function Navbar() {
           {/* Desktop nav links */}
           <nav className="hidden items-center gap-1 md:flex">
             {links.map((link) => {
-              const isActive =
-                activeSection === link.href.replace("#", "")
+              const isActive = activeSection === link.href.replace("#", "")
               return (
                 <button
                   key={link.labelKey}
@@ -220,7 +219,7 @@ export function Navbar() {
                 <button
                   key={l}
                   onClick={() => setLocale(l)}
-                  className={`cursor-pointer px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
+                  className={`cursor-pointer px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-colors ${
                     i > 0 ? "border-l border-border" : ""
                   } ${
                     l === locale

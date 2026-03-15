@@ -8,7 +8,16 @@ const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 const hobbyIcons: Record<string, React.ReactNode> = {
   badminton: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <circle cx="12" cy="5" r="3" />
       <line x1="12" y1="8" x2="12" y2="16" />
       <path d="M8 21l4-5 4 5" />
@@ -16,14 +25,32 @@ const hobbyIcons: Record<string, React.ReactNode> = {
     </svg>
   ),
   cube: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
       <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
       <line x1="12" y1="22.08" x2="12" y2="12" />
     </svg>
   ),
   math: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <line x1="12" y1="2" x2="12" y2="10" />
       <line x1="8" y1="6" x2="16" y2="6" />
       <line x1="8" y1="18" x2="16" y2="18" />
@@ -32,7 +59,16 @@ const hobbyIcons: Record<string, React.ReactNode> = {
     </svg>
   ),
   piano: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <rect x="2" y="4" width="20" height="16" rx="2" />
       <line x1="8" y1="4" x2="8" y2="14" />
       <line x1="12" y1="4" x2="12" y2="14" />
@@ -42,7 +78,17 @@ const hobbyIcons: Record<string, React.ReactNode> = {
   ),
 }
 
-function Photo({ src, alt, delay, inView }: { src: string; alt: string; delay: number; inView: boolean }) {
+function Photo({
+  src,
+  alt,
+  delay,
+  inView,
+}: {
+  src: string
+  alt: string
+  delay: number
+  inView: boolean
+}) {
   return (
     <motion.div
       className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border"
@@ -69,7 +115,7 @@ export function BeyondWork() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
+          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
             {locale === "en" ? "Personal" : "Osebno"}
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
@@ -92,14 +138,24 @@ export function BeyondWork() {
 
           {/* Photo grid */}
           <div className="grid grid-cols-2 gap-4">
-            <Photo src="/father.jpeg" alt="Family" delay={0.2} inView={inView} />
-            <Photo src="/father2.jpeg" alt="With my child" delay={0.3} inView={inView} />
+            <Photo
+              src="/father.jpeg"
+              alt="Family"
+              delay={0.2}
+              inView={inView}
+            />
+            <Photo
+              src="/father2.jpeg"
+              alt="With my child"
+              delay={0.3}
+              inView={inView}
+            />
           </div>
         </div>
 
         {/* Hobbies */}
         <motion.p
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-teal"
+          className="mb-6 text-xs font-semibold tracking-[0.2em] text-teal uppercase"
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: EASE, delay: 0.2 }}
@@ -112,7 +168,8 @@ export function BeyondWork() {
               key={hobby.icon}
               className="rounded-2xl border border-border p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(79,207,192,0.04) 0%, rgba(255,255,255,0.02) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(79,207,192,0.04) 0%, rgba(255,255,255,0.02) 100%)",
               }}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -133,9 +190,19 @@ export function BeyondWork() {
 
         {/* Photo row */}
         <div className="grid grid-cols-3 gap-4">
-          <Photo src="/badminton.jpeg" alt="Badminton" delay={0.4} inView={inView} />
+          <Photo
+            src="/badminton.jpeg"
+            alt="Badminton"
+            delay={0.4}
+            inView={inView}
+          />
           <Photo src="/piano.jpeg" alt="Piano" delay={0.5} inView={inView} />
-          <Photo src="/hiking.jpeg" alt="Hiking adventures" delay={0.6} inView={inView} />
+          <Photo
+            src="/hiking.jpeg"
+            alt="Hiking adventures"
+            delay={0.6}
+            inView={inView}
+          />
         </div>
       </div>
     </section>

@@ -157,7 +157,10 @@ export const t = {
           en: "Luka is an excellent leader whom both colleagues and clients can trust. He transforms complex challenges into concrete, actionable steps. He stays calm and focused even under tight deadlines. His ability to recognize potential in people and entrust them with responsibility builds team confidence and fosters a culture of collaboration and mutual respect.",
           sl: "Luka predstavlja odličnega vodjo, ki mu lahko zaupamo tako sodelavci kot naročniki projekta. Kot vodja zna pretvoriti kompleksne izzive v konkretne, izvedljive korake. Pri tem ohranja mirnost in jasno usmeritev tudi takrat, ko so roki kratki ali okoliščine zahtevne. Posebej izstopa njegova sposobnost, da v ljudeh prepozna potencial in jim zaupa odgovornost. S tem gradi samozavest ekipe ter spodbuja kulturo sodelovanja in medsebojnega spoštovanja.",
         },
-        author: { en: "Jan Krivec, Indigo Labs", sl: "Jan Krivec, Indigo Labs" },
+        author: {
+          en: "Jan Krivec, Indigo Labs",
+          sl: "Jan Krivec, Indigo Labs",
+        },
         photo: "/jankrivec.jpeg",
       },
       {
@@ -165,7 +168,10 @@ export const t = {
           en: "What stands out most about Luka is his ability to rapidly adopt new technologies. While others are still wondering if something is mature enough, he's already testing it and thinking about how to meaningfully integrate it. He leads by example. He doesn't talk about how things should be done, he shows it. His critical thinking means decisions are never made superficially. I'm convinced that Luka, with his combination of technical knowledge, vision, character, and attitude toward people, represents exactly what Top Potential should mean.",
           sl: "Pri Luki najbolj izstopa njegova sposobnost hitrega osvajanja novih tehnologij. Medtem ko se drugi še sprašujemo, ali je nekaj že dovolj zrelo za uporabo, on to že testira, razume in razmišlja, kako lahko to smiselno vključimo v naše projekte. Ni samo tehnično izjemno podkovan, ampak vodi z zgledom. Ne govori, kako bi se stvari morale delati, pokaže. Njegovo kritično razmišljanje pomeni, da odločitev nikoli ne sprejema površinsko, ampak vedno premisli širšo sliko in posledice. Prepričan sem, da Luka s svojo kombinacijo tehničnega znanja, vizije, karakterja in odnosa do ljudi predstavlja točno to, kar naj bi pomenil Top Potencial.",
         },
-        author: { en: "Uroš Lesjak, Indigo Labs", sl: "Uroš Lesjak, Indigo Labs" },
+        author: {
+          en: "Uroš Lesjak, Indigo Labs",
+          sl: "Uroš Lesjak, Indigo Labs",
+        },
         photo: "/uroslesjak.jpeg",
       },
     ],
@@ -179,7 +185,7 @@ export const t = {
       {
         quote: {
           en: "Luka is one of the smartest people I know, and that's in an environment surrounded by highly educated professionals. When he encounters a problem, he doesn't look for a quick fix. He goes deep, understands the context, and builds a system that works. His work ethic is extraordinary: he can put in 16-hour days without sacrificing quality. His productivity exceeds all standard measures. Where an average developer would spend days, Luka builds a solution in hours. His efficiency is comparable to the work of a small team. In the industry, they call this a '10x engineer.' With his combination of intelligence, technical knowledge, work ethic, and execution ability, Luka represents a profile that deserves the AmCham Top Potential 2026 recognition.",
-          sl: "Luka je eden najpametnejših ljudi, ki jih poznam, in to v okolju, kjer sem obkrožen z visoko izobraženimi strokovnjaki. Ko naleti na problem, ne išče hitre rešitve. Raje gre v globino, razume kontekst in zgradi sistem, ki deluje. Lukajeva delovna etika je nekaj posebnega. Ko pride do dela, lahko vlaga 16 ur dnevno in to ne gre na račun kakovosti. Ostane osredotočen, natančen, produktiven. Njegova produktivnost presega vse običajne meritve. Tam, kjer bi povprečen razvijalec porabil več dni, Luka zgradi rešitev v nekaj urah. Njegova učinkovitost je primerljiva z delom manjše ekipe. V branži temu pravijo \"10x engineer\". Luka z vsemi temi lastnostmi predstavlja profil, ki si zasluži priznanje AmCham Top Potencial leta 2026.",
+          sl: 'Luka je eden najpametnejših ljudi, ki jih poznam, in to v okolju, kjer sem obkrožen z visoko izobraženimi strokovnjaki. Ko naleti na problem, ne išče hitre rešitve. Raje gre v globino, razume kontekst in zgradi sistem, ki deluje. Lukajeva delovna etika je nekaj posebnega. Ko pride do dela, lahko vlaga 16 ur dnevno in to ne gre na račun kakovosti. Ostane osredotočen, natančen, produktiven. Njegova produktivnost presega vse običajne meritve. Tam, kjer bi povprečen razvijalec porabil več dni, Luka zgradi rešitev v nekaj urah. Njegova učinkovitost je primerljiva z delom manjše ekipe. V branži temu pravijo "10x engineer". Luka z vsemi temi lastnostmi predstavlja profil, ki si zasluži priznanje AmCham Top Potencial leta 2026.',
         },
         author: { en: "dr. Jernej Jan Kočica", sl: "dr. Jernej Jan Kočica" },
         role: { en: "CTO, SpaceGuardian", sl: "CTO, SpaceGuardian" },
@@ -202,7 +208,10 @@ export const t = {
           sl: "Pri Luki me vedno znova navdušuje kombinacija radovednosti in odgovornosti. Pri sodelovanju z njim hitro opaziš, da razmišlja premišljeno in strukturirano, tudi v zahtevnih situacijah. Prav zato njegove rešitve niso le učinkovite, ampak tudi trajne. Tak pristop ustvarja zaupanje pri ljudeh, s katerimi sodeluje. Poleg strokovnosti Luko odlikuje tudi pripravljenost deliti znanje in pomagati drugim. Prepričan sem, da Luka s svojim znanjem, integriteto in načinom razmišljanja predstavlja profil posameznika, ki lahko pomembno prispeva k razvoju okolja, v katerem deluje.",
         },
         author: { en: "dr. Janez Lapajne", sl: "dr. Janez Lapajne" },
-        role: { en: "Head of AI, SpaceGuardian", sl: "Head of AI, SpaceGuardian" },
+        role: {
+          en: "Head of AI, SpaceGuardian",
+          sl: "Head of AI, SpaceGuardian",
+        },
         pdfUrl: "/izjava-podpore-janez.pdf",
         photo: "/janezlapajne.jpeg",
       },
@@ -215,8 +224,14 @@ export const t = {
       en: "I joined AmCham with Indigo Labs in 2025 and quickly found my way into AmCham Young. The community, the conversations, and the energy of people who are genuinely trying to move things forward. It has been one of the most valuable environments I have been part of. I've included a video from when it all started.",
       sl: "Z Indigo Labs sem se pridružil AmCham leta 2025 in se kmalu vključil v AmCham Young. Skupnost, pogovori in energija ljudi, ki resnično želijo premikati stvari naprej. To je eno najbolj dragocenih okolij, katerih del sem bil. Ta video dodajam kot spomin na začetek.",
     },
-    contributionsLabel: { en: "Where I see my role", sl: "Kje vidim svojo vlogo" },
-    snowballBadge: { en: "AmCham YOUng · Snowball", sl: "AmCham YOUng · Snowball" },
+    contributionsLabel: {
+      en: "Where I see my role",
+      sl: "Kje vidim svojo vlogo",
+    },
+    snowballBadge: {
+      en: "AmCham YOUng · Snowball",
+      sl: "AmCham YOUng · Snowball",
+    },
     snowballDesc: {
       en: "Slovenia3000 is something I started with a few friends, a small platform for long-term national thinking beyond political cycles. It is early and still finding its shape, but I would love to bring it into Snowball's conversations as one possible step toward giving this kind of thinking a more structured digital home.",
       sl: "Slovenija 3000 sem začel z nekaj prijatelji, majhna platforma za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Je zgodnja in še išče svojo obliko, a jo bi rad vnesel v pogovore Snowball kot en možen korak k temu, da bi tovrstno razmišljanje dobilo bolj strukturirano digitalno prisotnost.",
@@ -226,7 +241,10 @@ export const t = {
       en: "As co-founder of SpaceGuardian and a builder of AI systems, I bring a practitioner's perspective to policy and strategy conversations about the technologies defining Slovenia's next decade. I want to help the Ready 4D Future committee move from observation to action: how do we attract AI talent, shape regulation that enables rather than blocks innovation, and position Slovenian deep-tech as a contributor rather than a follower in European tech policy.",
       sl: "Kot soustanovitelj SpaceGuardian in graditelj AI sistemov prinašam perspektivo praktika v razprave o politiki in strategiji za tehnologije, ki bodo določale naslednje desetletje v Sloveniji. Komisiji Ready 4D Future želim pomagati preiti od opazovanja k ukrepanju: kako privabiti AI talent, oblikovati regulacijo, ki inovacije omogoča namesto zavira, in postaviti slovenski deep-tech kot sooblikovalca, ne sledilca evropske tehnološke politike.",
     },
-    delegationBadge: { en: "International Collaboration", sl: "Mednarodno sodelovanje" },
+    delegationBadge: {
+      en: "International Collaboration",
+      sl: "Mednarodno sodelovanje",
+    },
     delegationDesc: {
       en: "I was part of Startup Overseas 2025: Colorado, USA. Seeing how much preparation determines the outcome, I want to help early-stage startups make the most of these delegations: know their story before they land, understand the market context, be ready to pitch to a local audience, and leave with a follow-up plan that has real outcomes attached.",
       sl: "Bil sem del Startup Overseas 2025: Kolorado, ZDA. Ker sem videl, kako odločilna je priprava, želim startupom pomagati izkoristiti delegacije: poznati svojo zgodbo pred pristakom, razumeti tržni kontekst, biti pripravljeni na nastop pred lokalnim občinstvom in imeti načrt nadaljnjih korakov z jasnimi rezultati.",
@@ -236,8 +254,14 @@ export const t = {
       en: "I would love to become a mentor to a young startup entrepreneur through AmCham's Mentor Program. Sharing what I've learned building Indigo Labs and SpaceGuardian: from team dynamics and product development to navigating uncertainty and finding the right investors.",
       sl: "Rad bi postal mentor mlademu startup podjetniku v okviru programa AmCham Mentor. Delil bi, kar sem se naučil pri gradnji Indigo Labs in SpaceGuardian: od dinamike ekip in razvoja produktov do navigacije negotovosti in iskanja pravih investitorjev.",
     },
-    statementLabel: { en: "Read my written statement", sl: "Preberi mojo pisno izjavo" },
-    statementTitle: { en: "My role and contribution", sl: "Moja vloga in prispevek" },
+    statementLabel: {
+      en: "Read my written statement",
+      sl: "Preberi mojo pisno izjavo",
+    },
+    statementTitle: {
+      en: "My role and contribution",
+      sl: "Moja vloga in prispevek",
+    },
     statement: {
       en: "I will contribute across four AmCham areas. Through Snowball, I want to bring Slovenia3000 into the conversation as a small platform for long-term national thinking beyond political cycles. In Ready 4D Future, as co-founder of SpaceGuardian and a builder of AI systems, I will bring a practitioner's perspective to AI governance and deep-tech policy, helping the committee move from observation to concrete action. Having been part of Startup Overseas 2025 in Colorado, I saw first-hand how much preparation shapes outcomes. I want to help early-stage startups know their story before they land, read the market, and leave with a follow-up plan that actually converts. Through the AmCham Mentor program, I would love to share what I have learned building two companies with a young startup entrepreneur, from team dynamics and early product decisions to navigating uncertainty. I also plan to join the Young Leaders Club as the longer-term part of my AmCham journey.",
       sl: "Prispeval bom na štirih področjih AmCham. Prek Snowball želim vpeljati Slovenija 3000 v pogovor kot majhno platformo za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. V Ready 4D Future bom prispeval perspektivo praktika k urejanju AI in deep-tech politike ter komisiji pomagal preiti od opazovanja k dejanskim ukrepom. Ker sem bil del Startup Overseas 2025 v Koloradu, sem iz prve roke videl, kako odločilna je priprava. Startupom želim pomagati, da poznajo svojo zgodbo pred pristakom, razumejo trg in odidejo z načrtom, ki dejansko vodi do rezultatov. Prek programa AmCham Mentor bi rad delil izkušnje gradnje dveh podjetij z mladim startup podjetnikom, od dinamike ekipe in prvih produktnih odločitev do navigacije negotovosti. Načrtujem tudi pridružitev Young Leaders Club kot dolgoročni del moje poti z AmCham.",
@@ -269,22 +293,34 @@ export const t = {
     hobbies: [
       {
         title: { en: "Badminton", sl: "Badminton" },
-        desc: { en: "Competitive spirit, strategic thinking", sl: "Tekmovalni duh, strateško razmišljanje" },
+        desc: {
+          en: "Competitive spirit, strategic thinking",
+          sl: "Tekmovalni duh, strateško razmišljanje",
+        },
         icon: "badminton",
       },
       {
         title: { en: "Rubik's cubes", sl: "Rubikove kocke" },
-        desc: { en: "Pattern recognition, algorithmic problem solving", sl: "Prepoznavanje vzorcev, algoritmično reševanje" },
+        desc: {
+          en: "Pattern recognition, algorithmic problem solving",
+          sl: "Prepoznavanje vzorcev, algoritmično reševanje",
+        },
         icon: "cube",
       },
       {
         title: { en: "Math olympiads", sl: "Matematične olimpijade" },
-        desc: { en: "Analytical depth, creative proofs", sl: "Analitična globina, kreativni dokazi" },
+        desc: {
+          en: "Analytical depth, creative proofs",
+          sl: "Analitična globina, kreativni dokazi",
+        },
         icon: "math",
       },
       {
         title: { en: "Piano", sl: "Klavir" },
-        desc: { en: "Discipline, expression, patience", sl: "Disciplina, izražanje, potrpežljivost" },
+        desc: {
+          en: "Discipline, expression, patience",
+          sl: "Disciplina, izražanje, potrpežljivost",
+        },
         icon: "piano",
       },
     ],

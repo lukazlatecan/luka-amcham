@@ -19,7 +19,7 @@ function TimelineItem({
 }) {
   return (
     <motion.div
-      className={`flex flex-col gap-1 items-start text-left ${
+      className={`flex flex-col items-start gap-1 text-left ${
         direction === "above" ? "pb-2" : "pt-2"
       }`}
       initial={{ opacity: 0, y: direction === "above" ? 20 : -20 }}
@@ -30,10 +30,10 @@ function TimelineItem({
       }
       transition={{ duration: 0.6, delay: 0.4 + index * 0.15, ease: "easeOut" }}
     >
-      <span className="font-mono text-xs font-bold uppercase tracking-widest text-teal">
+      <span className="font-mono text-xs font-bold tracking-widest text-teal uppercase">
         {item.year[locale]}
       </span>
-      <span className="max-w-[160px] text-sm font-semibold leading-snug text-text">
+      <span className="max-w-[160px] text-sm leading-snug font-semibold text-text">
         {item.title[locale]}
       </span>
       <span className="max-w-[160px] text-xs leading-relaxed text-text-dim">
@@ -59,14 +59,19 @@ function MobileTimelineItem({
       className="flex items-start gap-4"
       initial={{ opacity: 0, x: -24 }}
       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -24 }}
-      transition={{ duration: 0.55, delay: 0.15 + index * 0.12, ease: "easeOut" }}
+      transition={{
+        duration: 0.55,
+        delay: 0.15 + index * 0.12,
+        ease: "easeOut",
+      }}
     >
       {/* dot + line column */}
       <div className="flex w-4 flex-shrink-0 flex-col items-center">
         <div
           className="mt-0.5 h-4 w-4 flex-shrink-0 rounded-full bg-teal"
           style={{
-            boxShadow: "0 0 12px rgba(79,207,192,0.5), 0 0 24px rgba(79,207,192,0.2)",
+            boxShadow:
+              "0 0 12px rgba(79,207,192,0.5), 0 0 24px rgba(79,207,192,0.2)",
           }}
         />
         {index < t.timeline.items.length - 1 && (
@@ -82,10 +87,10 @@ function MobileTimelineItem({
 
       {/* content */}
       <div className="flex flex-col gap-1 pb-8">
-        <span className="font-mono text-xs font-bold uppercase tracking-widest text-teal">
+        <span className="font-mono text-xs font-bold tracking-widest text-teal uppercase">
           {item.year[locale]}
         </span>
-        <span className="text-sm font-semibold leading-snug text-text">
+        <span className="text-sm leading-snug font-semibold text-text">
           {item.title[locale]}
         </span>
         <span className="text-xs leading-relaxed text-text-dim">
@@ -109,7 +114,7 @@ export function Timeline() {
 
   const items = t.timeline.items
   const desktopLayout: Array<"above" | "below"> = items.map((_, i) =>
-    i % 2 === 0 ? "above" : "below",
+    i % 2 === 0 ? "above" : "below"
   )
 
   return (
@@ -126,7 +131,7 @@ export function Timeline() {
           animate={sectionInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
+          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
             Timeline
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
@@ -183,7 +188,8 @@ export function Timeline() {
                     <motion.div
                       className="h-4 w-4 rounded-full bg-teal"
                       style={{
-                        boxShadow: "0 0 12px rgba(79,207,192,0.5), 0 0 24px rgba(79,207,192,0.2)",
+                        boxShadow:
+                          "0 0 12px rgba(79,207,192,0.5), 0 0 24px rgba(79,207,192,0.2)",
                       }}
                       initial={{ scale: 0, opacity: 0 }}
                       animate={

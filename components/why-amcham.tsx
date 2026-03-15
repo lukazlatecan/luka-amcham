@@ -42,23 +42,28 @@ interface ColumnProps {
 
 function Column({ title, items, highlighted = false }: ColumnProps) {
   return (
-    <motion.div
-      variants={cardVariants}
-      className="flex-1"
-    >
+    <motion.div variants={cardVariants} className="flex-1">
       <div
         className={[
-          "flex h-full flex-col rounded-2xl bg-surface border p-8",
+          "flex h-full flex-col rounded-2xl border bg-surface p-8",
           highlighted
             ? "border-teal/30 shadow-[0_0_40px_rgba(79,207,192,0.12)]"
             : "border-border",
         ].join(" ")}
-        style={highlighted ? { borderTop: "3px solid #4fcfc0", background: "linear-gradient(180deg, rgba(79,207,192,0.06) 0%, rgba(255,255,255,0.03) 100%)" } : undefined}
+        style={
+          highlighted
+            ? {
+                borderTop: "3px solid #4fcfc0",
+                background:
+                  "linear-gradient(180deg, rgba(79,207,192,0.06) 0%, rgba(255,255,255,0.03) 100%)",
+              }
+            : undefined
+        }
       >
         {/* Title */}
         <h3
           className={[
-            "mb-6 text-sm font-semibold uppercase tracking-widest",
+            "mb-6 text-sm font-semibold tracking-widest uppercase",
             highlighted ? "text-teal" : "text-text-dim",
           ].join(" ")}
         >
@@ -116,11 +121,7 @@ export function WhyAmCham() {
   ]
 
   return (
-    <section
-      id="amcham"
-      ref={ref}
-      className="px-6 py-16"
-    >
+    <section id="amcham" ref={ref} className="px-6 py-16">
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
         <motion.div
@@ -129,7 +130,7 @@ export function WhyAmCham() {
           variants={titleVariants}
           className="mb-20 text-center"
         >
-          <div className="mb-4 inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-teal">
+          <div className="mb-4 inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-teal uppercase">
             AmCham Young Top Potential
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-text md:text-5xl">

@@ -18,7 +18,15 @@ const stagger: Variants = {
   visible: { transition: { staggerChildren: 0.14 } },
 }
 
-function StatementModal({ open, onClose, locale }: { open: boolean; onClose: () => void; locale: "en" | "sl" }) {
+function StatementModal({
+  open,
+  onClose,
+  locale,
+}: {
+  open: boolean
+  onClose: () => void
+  locale: "en" | "sl"
+}) {
   const text = t.amchamSection.statement[locale]
   const charCount = text.replace(/\s/g, "").length
 
@@ -46,7 +54,8 @@ function StatementModal({ open, onClose, locale }: { open: boolean; onClose: () 
             <div
               className="relative w-full max-w-2xl rounded-2xl border border-border p-8"
               style={{
-                background: "linear-gradient(135deg, rgba(79,207,192,0.06) 0%, #0a0a0f 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(79,207,192,0.06) 0%, #0a0a0f 100%)",
                 borderTop: "3px solid rgba(79,207,192,0.4)",
               }}
               onClick={(e) => e.stopPropagation()}
@@ -54,15 +63,24 @@ function StatementModal({ open, onClose, locale }: { open: boolean; onClose: () 
               {/* Close button */}
               <button
                 onClick={onClose}
-                className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full border border-border text-text-muted transition-colors hover:border-teal/40 hover:text-teal"
+                className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full border border-border text-text-muted transition-colors hover:border-teal/40 hover:text-teal"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M18 6L6 18M6 6l12 12" />
                 </svg>
               </button>
 
               {/* Title */}
-              <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+              <div className="mb-2 text-xs font-semibold tracking-[0.2em] text-teal uppercase">
                 AmCham Top Potential 2026
               </div>
               <h3 className="mb-6 text-xl font-bold text-text">
@@ -77,9 +95,13 @@ function StatementModal({ open, onClose, locale }: { open: boolean; onClose: () 
               {/* Char count */}
               <div className="flex items-center justify-between border-t border-border pt-4">
                 <span className="text-xs text-text-muted">
-                  {locale === "en" ? "Characters (without spaces)" : "Znaki (brez presledkov)"}
+                  {locale === "en"
+                    ? "Characters (without spaces)"
+                    : "Znaki (brez presledkov)"}
                 </span>
-                <span className={`font-mono text-sm font-semibold ${charCount <= 1000 ? "text-teal" : "text-coral"}`}>
+                <span
+                  className={`font-mono text-sm font-semibold ${charCount <= 1000 ? "text-teal" : "text-coral"}`}
+                >
                   {charCount} / 1000
                 </span>
               </div>
@@ -94,15 +116,24 @@ function StatementModal({ open, onClose, locale }: { open: boolean; onClose: () 
 export function AmChamSection() {
   const { locale } = useLocale()
   const [modalOpen, setModalOpen] = useState(false)
-  const [introRef, introInView] = useInView({ threshold: 0.08, triggerOnce: true })
-  const [contributionsRef, contributionsInView] = useInView({ threshold: 0.08, triggerOnce: true })
+  const [introRef, introInView] = useInView({
+    threshold: 0.08,
+    triggerOnce: true,
+  })
+  const [contributionsRef, contributionsInView] = useInView({
+    threshold: 0.08,
+    triggerOnce: true,
+  })
 
   return (
     <section id="amcham" className="relative py-16">
-      <StatementModal open={modalOpen} onClose={() => setModalOpen(false)} locale={locale} />
+      <StatementModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        locale={locale}
+      />
 
       <div className="mx-auto max-w-4xl px-6">
-
         {/* Section header */}
         <motion.div
           ref={introRef}
@@ -111,7 +142,7 @@ export function AmChamSection() {
           animate={introInView ? "visible" : "hidden"}
           variants={fadeUp}
         >
-          <div className="mb-4 inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-teal">
+          <div className="mb-4 inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-teal uppercase">
             AmCham Top Potential 2026
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-text md:text-5xl">
@@ -126,13 +157,22 @@ export function AmChamSection() {
           animate={introInView ? "visible" : "hidden"}
           variants={stagger}
         >
-          <motion.p variants={fadeUp} className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+          <motion.p
+            variants={fadeUp}
+            className="mb-3 text-xs font-semibold tracking-[0.2em] text-teal uppercase"
+          >
             {t.amchamSection.introLabel[locale]}
           </motion.p>
-          <motion.p variants={fadeUp} className="mb-10 max-w-2xl text-[17px] leading-relaxed text-text-dim">
+          <motion.p
+            variants={fadeUp}
+            className="mb-10 max-w-2xl text-[17px] leading-relaxed text-text-dim"
+          >
             {t.amchamSection.intro[locale]}
           </motion.p>
-          <motion.div variants={fadeUp} className="overflow-hidden rounded-2xl border border-border aspect-video">
+          <motion.div
+            variants={fadeUp}
+            className="aspect-video overflow-hidden rounded-2xl border border-border"
+          >
             <iframe
               src="https://www.youtube.com/embed/nrig1CtGCck"
               title="AmCham presentation"
@@ -150,15 +190,27 @@ export function AmChamSection() {
           animate={contributionsInView ? "visible" : "hidden"}
           variants={stagger}
         >
-          <motion.div variants={fadeUp} className="mb-6 flex items-center justify-between gap-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+          <motion.div
+            variants={fadeUp}
+            className="mb-6 flex items-center justify-between gap-4"
+          >
+            <p className="text-xs font-semibold tracking-[0.2em] text-teal uppercase">
               {t.amchamSection.contributionsLabel[locale]}
             </p>
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 rounded-xl border border-teal/25 bg-teal/8 px-4 py-2 text-xs font-medium text-teal transition-all hover:bg-teal/15 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-xl border border-teal/25 bg-teal/8 px-4 py-2 text-xs font-medium text-teal transition-all hover:scale-[1.02] hover:bg-teal/15"
             >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
                 <polyline points="14 2 14 8 20 8" />
                 <line x1="16" y1="13" x2="8" y2="13" />
@@ -175,15 +227,18 @@ export function AmChamSection() {
               variants={fadeUp}
               className="flex flex-col rounded-2xl border border-border p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(79,207,192,0.05) 0%, rgba(255,255,255,0.02) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(79,207,192,0.05) 0%, rgba(255,255,255,0.02) 100%)",
                 borderTop: "3px solid rgba(79,207,192,0.4)",
               }}
             >
-              <span className="mb-3 inline-block self-start rounded-full border border-teal/25 bg-teal/8 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-teal">
+              <span className="mb-3 inline-block self-start rounded-full border border-teal/25 bg-teal/8 px-3 py-1 text-[10px] font-bold tracking-widest text-teal uppercase">
                 {t.amchamSection.snowballBadge[locale]}
               </span>
               <h3 className="mb-3 text-sm font-bold text-text">
-                {locale === "en" ? "Advocacy: Slovenia3000" : "Zagovorništvo: Slovenija 3000"}
+                {locale === "en"
+                  ? "Advocacy: Slovenia3000"
+                  : "Zagovorništvo: Slovenija 3000"}
               </h3>
               <p className="mb-4 flex-1 text-xs leading-relaxed text-text-dim">
                 {t.amchamSection.snowballDesc[locale]}
@@ -192,10 +247,19 @@ export function AmChamSection() {
                 href={t.beyondWork.slovenia3000.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-teal/60 hover:text-teal transition-colors"
+                className="inline-flex items-center gap-1 text-xs text-teal/60 transition-colors hover:text-teal"
               >
                 slovenia3000.si
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="11"
+                  height="11"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M7 17L17 7M17 7H7M17 7v10" />
                 </svg>
               </a>
@@ -206,14 +270,17 @@ export function AmChamSection() {
               variants={fadeUp}
               className="flex flex-col rounded-2xl border border-border p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(99,102,241,0.05) 0%, rgba(255,255,255,0.02) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(99,102,241,0.05) 0%, rgba(255,255,255,0.02) 100%)",
                 borderTop: "3px solid rgba(99,102,241,0.4)",
               }}
             >
-              <span className="mb-3 inline-block self-start rounded-full border border-indigo/25 bg-indigo/8 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-indigo">
+              <span className="mb-3 inline-block self-start rounded-full border border-indigo/25 bg-indigo/8 px-3 py-1 text-[10px] font-bold tracking-widest text-indigo uppercase">
                 {t.amchamSection.ready4dBadge[locale]}
               </span>
-              <h3 className="mb-3 text-sm font-bold text-text">Ready 4D Future</h3>
+              <h3 className="mb-3 text-sm font-bold text-text">
+                Ready 4D Future
+              </h3>
               <p className="flex-1 text-xs leading-relaxed text-text-dim">
                 {t.amchamSection.ready4dDesc[locale]}
               </p>
@@ -224,15 +291,18 @@ export function AmChamSection() {
               variants={fadeUp}
               className="flex flex-col rounded-2xl border border-border p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(240,76,92,0.05) 0%, rgba(255,255,255,0.02) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(240,76,92,0.05) 0%, rgba(255,255,255,0.02) 100%)",
                 borderTop: "3px solid rgba(240,76,92,0.4)",
               }}
             >
-              <span className="mb-3 inline-block self-start rounded-full border border-coral/25 bg-coral/8 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-coral">
+              <span className="mb-3 inline-block self-start rounded-full border border-coral/25 bg-coral/8 px-3 py-1 text-[10px] font-bold tracking-widest text-coral uppercase">
                 {t.amchamSection.delegationBadge[locale]}
               </span>
               <h3 className="mb-3 text-sm font-bold text-text">
-                {locale === "en" ? "Startup delegation readiness" : "Pripravljenost startupov"}
+                {locale === "en"
+                  ? "Startup delegation readiness"
+                  : "Pripravljenost startupov"}
               </h3>
               <p className="flex-1 text-xs leading-relaxed text-text-dim">
                 {t.amchamSection.delegationDesc[locale]}
@@ -244,11 +314,12 @@ export function AmChamSection() {
               variants={fadeUp}
               className="flex flex-col rounded-2xl border border-border p-6"
               style={{
-                background: "linear-gradient(135deg, rgba(79,207,192,0.05) 0%, rgba(255,255,255,0.02) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(79,207,192,0.05) 0%, rgba(255,255,255,0.02) 100%)",
                 borderTop: "3px solid rgba(79,207,192,0.4)",
               }}
             >
-              <span className="mb-3 inline-block self-start rounded-full border border-teal/25 bg-teal/8 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-teal">
+              <span className="mb-3 inline-block self-start rounded-full border border-teal/25 bg-teal/8 px-3 py-1 text-[10px] font-bold tracking-widest text-teal uppercase">
                 {t.amchamSection.mentorBadge[locale]}
               </span>
               <h3 className="mb-3 text-sm font-bold text-text">
@@ -260,7 +331,6 @@ export function AmChamSection() {
             </motion.div>
           </div>
         </motion.div>
-
       </div>
     </section>
   )

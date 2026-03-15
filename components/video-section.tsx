@@ -35,14 +35,14 @@ export function VideoSection() {
       >
         {/* Badge */}
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-          <span className="inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-teal">
+          <span className="inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-teal uppercase">
             Video
           </span>
         </motion.div>
 
         {/* Video embed */}
         <motion.div variants={fadeUp}>
-          <div className="overflow-hidden rounded-2xl border border-border aspect-video">
+          <div className="aspect-video overflow-hidden rounded-2xl border border-border">
             <iframe
               src="https://www.youtube.com/embed/nrig1CtGCck"
               title="Video"

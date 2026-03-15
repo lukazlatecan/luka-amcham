@@ -19,12 +19,14 @@ export function HowILead() {
 
   const title = locale === "en" ? "Stepping on stage" : "Na oder"
   const badge = locale === "en" ? "Public speaking" : "Javno nastopanje"
-  const body1 = locale === "en"
-    ? "Public speaking has been one of my biggest challenges outside my comfort zone. I had always built things behind screens and let the work speak for itself. Standing in front of an audience and owning the room felt like a different kind of skill entirely."
-    : "Javno nastopanje je bil eden mojih največjih izzivov izven cone udobja. Vedno sem gradil stvari za zasloni in pustil, da delo govori samo zase. Stati pred občinstvom in obvladati prostor se je zdelo povsem drugačna veščina."
-  const body2 = locale === "en"
-    ? "I spoke at several conferences on topics ranging from AI in product development to sustainable space infrastructure. Each time I walked off stage, I understood something new about communication, clarity and conviction."
-    : "Nastopil sem na več konferencah na teme od umetne inteligence v razvoju produktov do trajnostne vesoljske infrastrukture. Vsakič ko sem stopil z odra, sem razumel kaj novega o komunikaciji, jasnosti in prepričljivosti."
+  const body1 =
+    locale === "en"
+      ? "Public speaking has been one of my biggest challenges outside my comfort zone. I had always built things behind screens and let the work speak for itself. Standing in front of an audience and owning the room felt like a different kind of skill entirely."
+      : "Javno nastopanje je bil eden mojih največjih izzivov izven cone udobja. Vedno sem gradil stvari za zasloni in pustil, da delo govori samo zase. Stati pred občinstvom in obvladati prostor se je zdelo povsem drugačna veščina."
+  const body2 =
+    locale === "en"
+      ? "I spoke at several conferences on topics ranging from AI in product development to sustainable space infrastructure. Each time I walked off stage, I understood something new about communication, clarity and conviction."
+      : "Nastopil sem na več konferencah na teme od umetne inteligence v razvoju produktov do trajnostne vesoljske infrastrukture. Vsakič ko sem stopil z odra, sem razumel kaj novega o komunikaciji, jasnosti in prepričljivosti."
 
   return (
     <section id="leadership" ref={ref} className="relative py-14">
@@ -36,7 +38,7 @@ export function HowILead() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
+          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
             {badge}
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
@@ -67,7 +69,11 @@ export function HowILead() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: EASE, delay: 0.2 + i * 0.1 }}
               >
-                <img src={photo.src} alt={photo.alt} className="h-full w-full object-cover" />
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover"
+                />
               </motion.div>
             ))}
           </div>

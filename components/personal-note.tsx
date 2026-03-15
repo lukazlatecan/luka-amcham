@@ -11,10 +11,7 @@ export function PersonalNote() {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
 
   return (
-    <section
-      ref={ref}
-      className="px-6 py-16"
-    >
+    <section ref={ref} className="px-6 py-16">
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}
@@ -40,7 +37,7 @@ export function PersonalNote() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
-          className="mb-6 select-none font-serif text-8xl leading-none text-teal/20"
+          className="mb-6 font-serif text-8xl leading-none text-teal/20 select-none"
           aria-hidden
         >
           &ldquo;
@@ -52,7 +49,7 @@ export function PersonalNote() {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
         >
-          <p className="text-xl italic leading-relaxed text-white/80 md:text-2xl">
+          <p className="text-xl leading-relaxed text-white/80 italic md:text-2xl">
             {t.personal.text[locale]}
           </p>
         </motion.blockquote>
@@ -62,7 +59,7 @@ export function PersonalNote() {
           initial={{ opacity: 0, y: -16 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.5 }}
-          className="mt-6 select-none text-right font-serif text-8xl leading-none text-teal/20"
+          className="mt-6 text-right font-serif text-8xl leading-none text-teal/20 select-none"
           aria-hidden
         >
           &rdquo;
@@ -87,7 +84,7 @@ export function PersonalNote() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-8 text-sm font-medium uppercase tracking-widest text-teal/50"
+          className="mt-8 text-sm font-medium tracking-widest text-teal/50 uppercase"
         >
           Luka Zlatečan
         </motion.div>

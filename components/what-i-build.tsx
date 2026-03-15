@@ -18,7 +18,19 @@ interface BuildCardProps {
   visitLabel: string
 }
 
-function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, teamPhoto, url, visitLabel }: BuildCardProps) {
+function BuildCard({
+  tag,
+  company,
+  headline,
+  p1,
+  p2,
+  variant,
+  index,
+  inView,
+  teamPhoto,
+  url,
+  visitLabel,
+}: BuildCardProps) {
   const isIndigo = variant === "indigo"
   const accentColor = isIndigo ? "#f04c5c" : "#4fcfc0"
   const accentRgba = isIndigo ? "rgba(240,76,92," : "rgba(79,207,192,"
@@ -27,8 +39,12 @@ function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, tea
     <motion.div
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
-      className="flex flex-1 flex-col border border-border rounded-2xl overflow-hidden hover:border-border-hover transition-all"
+      transition={{
+        duration: 0.7,
+        ease: [0.16, 1, 0.3, 1],
+        delay: index * 0.15,
+      }}
+      className="flex flex-1 flex-col overflow-hidden rounded-2xl border border-border transition-all hover:border-border-hover"
       style={{
         borderTop: `3px solid ${accentColor}`,
         background: `linear-gradient(180deg, ${accentRgba}0.04) 0%, rgba(255,255,255,0.03) 100%)`,
@@ -39,13 +55,15 @@ function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, tea
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <img
-              src={isIndigo ? "/indigo-logo-white.png" : "/spaceguardian-logo.png"}
+              src={
+                isIndigo ? "/indigo-logo-white.png" : "/spaceguardian-logo.png"
+              }
               alt={company}
               className="h-7 object-contain"
             />
           </div>
           <span
-            className="shrink-0 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-widest"
+            className="shrink-0 rounded-full border px-3 py-1 text-xs font-bold tracking-widest uppercase"
             style={{
               borderColor: `${accentRgba}0.3)`,
               background: `${accentRgba}0.1)`,
@@ -57,17 +75,11 @@ function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, tea
         </div>
 
         {/* Headline */}
-        <p className="mt-4 text-base font-semibold text-text-dim">
-          {headline}
-        </p>
+        <p className="mt-4 text-base font-semibold text-text-dim">{headline}</p>
 
         {/* Body */}
-        <p className="mt-4 text-sm leading-relaxed text-text-muted">
-          {p1}
-        </p>
-        <p className="mt-3 text-sm leading-relaxed text-text-muted">
-          {p2}
-        </p>
+        <p className="mt-4 text-sm leading-relaxed text-text-muted">{p1}</p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">{p2}</p>
 
         {/* Visit button */}
         <a
@@ -82,7 +94,16 @@ function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, tea
           }}
         >
           {visitLabel}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <path d="M7 17L17 7M17 7H7M17 7v10" />
           </svg>
         </a>
@@ -90,7 +111,11 @@ function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, tea
 
       {/* Team photo */}
       <div className="aspect-video w-full overflow-hidden">
-        <img src={teamPhoto} alt={`${company} team`} className="h-full w-full object-cover" />
+        <img
+          src={teamPhoto}
+          alt={`${company} team`}
+          className="h-full w-full object-cover"
+        />
       </div>
     </motion.div>
   )
@@ -105,12 +130,8 @@ export function WhatIBuild() {
   })
 
   return (
-    <section
-      ref={ref}
-      id="companies"
-      className="w-full py-14"
-    >
-      <div className="max-w-6xl mx-auto px-6">
+    <section ref={ref} id="companies" className="w-full py-14">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: -12 }}
@@ -118,13 +139,13 @@ export function WhatIBuild() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <span className="inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
+          <span className="inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
             {locale === "en" ? "What I Build" : "Kaj gradim"}
           </span>
         </motion.div>
 
         {/* Cards */}
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col gap-6 lg:flex-row">
           <BuildCard
             variant="indigo"
             company="Indigo Labs"
@@ -136,7 +157,9 @@ export function WhatIBuild() {
             inView={inView}
             teamPhoto="/indigolabsteam.jpeg"
             url="https://indigo.si"
-            visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
+            visitLabel={
+              locale === "en" ? "Visit website" : "Obišči spletno stran"
+            }
           />
           <BuildCard
             variant="space"
@@ -149,7 +172,9 @@ export function WhatIBuild() {
             inView={inView}
             teamPhoto="/spaceguardianteam.jpeg"
             url="https://spaceguardian.eu"
-            visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
+            visitLabel={
+              locale === "en" ? "Visit website" : "Obišči spletno stran"
+            }
           />
         </div>
       </div>

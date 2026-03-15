@@ -36,12 +36,17 @@ function TestimonialCard({
     <motion.div
       className="rounded-2xl border border-border p-8"
       style={{
-        background: "linear-gradient(135deg, rgba(79,207,192,0.04) 0%, rgba(255,255,255,0.03) 100%)",
+        background:
+          "linear-gradient(135deg, rgba(79,207,192,0.04) 0%, rgba(255,255,255,0.03) 100%)",
         borderLeft: "3px solid rgba(79,207,192,0.3)",
       }}
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
-      transition={{ duration: 0.65, delay: 0.15 + index * 0.15, ease: "easeOut" }}
+      transition={{
+        duration: 0.65,
+        delay: 0.15 + index * 0.15,
+        ease: "easeOut",
+      }}
     >
       {/* decorative quote mark */}
       <div className="mb-5">
@@ -49,7 +54,7 @@ function TestimonialCard({
       </div>
 
       {/* quote */}
-      <blockquote className="text-base italic leading-relaxed text-text-dim">
+      <blockquote className="text-base leading-relaxed text-text-dim italic">
         {item.quote[locale]}
       </blockquote>
 
@@ -60,10 +65,14 @@ function TestimonialCard({
       <div className="flex items-center gap-3">
         {/* avatar circle with gradient + initial */}
         <div className="h-9 w-9 flex-shrink-0 overflow-hidden rounded-full border border-border">
-          <img src={item.photo} alt={item.author[locale]} className="h-full w-full object-cover" />
+          <img
+            src={item.photo}
+            alt={item.author[locale]}
+            className="h-full w-full object-cover"
+          />
         </div>
 
-        <span className="text-xs font-mono uppercase tracking-widest text-text-dim">
+        <span className="font-mono text-xs tracking-widest text-text-dim uppercase">
           {item.author[locale]}
         </span>
       </div>
@@ -85,7 +94,7 @@ export function Testimonials() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
+          <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
             Perspectives
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
@@ -105,7 +114,6 @@ export function Testimonials() {
             />
           ))}
         </div>
-
       </div>
     </section>
   )

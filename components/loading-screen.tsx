@@ -6,10 +6,18 @@ import { t, useLocale } from "@/lib/i18n"
 
 function Stars() {
   const [stars, setStars] = useState<
-    { id: number; left: string; top: string; size: number; delay: string; duration: string }[]
+    {
+      id: number
+      left: string
+      top: string
+      size: number
+      delay: string
+      duration: string
+    }[]
   >([])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setStars(
       Array.from({ length: 60 }, (_, i) => ({
         id: i,
@@ -18,12 +26,12 @@ function Stars() {
         size: Math.random() * 2 + 1,
         delay: `${Math.random() * 4}s`,
         duration: `${2 + Math.random() * 3}s`,
-      })),
+      }))
     )
   }, [])
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {stars.map((s) => (
         <div
           key={s.id}
@@ -86,7 +94,7 @@ export function LoadingScreen() {
 
           {/* Subtle teal radial glow */}
           <div
-            className="absolute w-[600px] h-[600px] rounded-full pointer-events-none opacity-40"
+            className="pointer-events-none absolute h-[600px] w-[600px] rounded-full opacity-40"
             style={{
               background:
                 "radial-gradient(circle, rgba(79,207,192,0.12) 0%, transparent 70%)",
@@ -113,7 +121,7 @@ export function LoadingScreen() {
             </motion.div>
 
             {/* Typewriter line */}
-            <div className="min-h-[1.6em] font-mono text-[clamp(11px,1.8vw,14px)] uppercase tracking-[0.18em] text-teal/70">
+            <div className="min-h-[1.6em] font-mono text-[clamp(11px,1.8vw,14px)] tracking-[0.18em] text-teal/70 uppercase">
               {typedText}
               <span
                 className="ml-0.5 inline-block h-[1em] w-[0.55em] align-text-bottom transition-colors duration-75"
@@ -134,10 +142,10 @@ export function LoadingScreen() {
                   transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
                   className="flex flex-col items-center gap-2"
                 >
-                  <h1 className="font-sans text-[clamp(32px,6vw,56px)] font-semibold leading-tight tracking-tight text-text">
+                  <h1 className="font-sans text-[clamp(32px,6vw,56px)] leading-tight font-semibold tracking-tight text-text">
                     Luka Zlatečan
                   </h1>
-                  <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-text-dim/50">
+                  <div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.2em] text-text-dim/50 uppercase">
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-teal shadow-[0_0_8px_#4fcfc0]" />
                     CEO SpaceGuardian · CTO Indigo Labs
                   </div>

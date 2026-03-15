@@ -4,10 +4,18 @@ import { useState, useEffect } from "react"
 
 export function StarField() {
   const [stars, setStars] = useState<
-    { id: number; x: number; y: number; size: number; opacity: number; duration: number }[]
+    {
+      id: number
+      x: number
+      y: number
+      size: number
+      opacity: number
+      duration: number
+    }[]
   >([])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setStars(
       Array.from({ length: 60 }, (_, i) => ({
         id: i,
@@ -16,12 +24,15 @@ export function StarField() {
         size: Math.random() * 1.5 + 0.5,
         opacity: Math.random() * 0.5 + 0.1,
         duration: Math.random() * 4 + 3,
-      })),
+      }))
     )
   }, [])
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+    <div
+      className="pointer-events-none fixed inset-0 overflow-hidden"
+      style={{ zIndex: 0 }}
+    >
       {/* Aurora layer 1 — large teal wash, upper-left to center */}
       <div
         style={{

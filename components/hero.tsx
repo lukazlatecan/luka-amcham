@@ -58,36 +58,66 @@ export function Hero() {
         </motion.div>
 
         {/* AmCham badge */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-          <img src="/amcham-logo-white.svg" alt="AmCham Slovenia" className="h-8 w-auto object-contain sm:h-10" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-text-muted sm:text-[13px]">
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3"
+        >
+          <img
+            src="/amcham-logo-white.svg"
+            alt="AmCham Slovenia"
+            className="h-8 w-auto object-contain sm:h-10"
+          />
+          <span className="font-mono text-[11px] tracking-[0.18em] text-text-muted uppercase sm:text-[13px]">
             Top Potential 2026
           </span>
         </motion.div>
 
         {/* Company logos + roles */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-3 sm:flex-row">
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col items-center gap-3 sm:flex-row"
+        >
           <div
             className="flex h-14 items-center gap-4 rounded-xl px-6"
-            style={{ background: "rgba(79,207,192,0.08)", border: "1px solid rgba(79,207,192,0.2)" }}
+            style={{
+              background: "rgba(79,207,192,0.08)",
+              border: "1px solid rgba(79,207,192,0.2)",
+            }}
           >
-            <img src="/spaceguardian-logo.png" alt="SpaceGuardian" className="h-8 w-auto max-w-[110px] object-contain" />
-            <span className="shrink-0 font-mono text-[12px] uppercase tracking-[0.15em] text-teal/85">CEO</span>
+            <img
+              src="/spaceguardian-logo.png"
+              alt="SpaceGuardian"
+              className="h-8 w-auto max-w-[110px] object-contain"
+            />
+            <span className="shrink-0 font-mono text-[12px] tracking-[0.15em] text-teal/85 uppercase">
+              CEO
+            </span>
           </div>
-          <span className="hidden shrink-0 text-text-muted/40 text-lg font-light sm:block">×</span>
+          <span className="hidden shrink-0 text-lg font-light text-text-muted/40 sm:block">
+            ×
+          </span>
           <div
             className="flex h-14 items-center gap-4 rounded-xl px-6"
-            style={{ background: "rgba(240,76,92,0.08)", border: "1px solid rgba(240,76,92,0.2)" }}
+            style={{
+              background: "rgba(240,76,92,0.08)",
+              border: "1px solid rgba(240,76,92,0.2)",
+            }}
           >
-            <img src="/indigo-logo-white.png" alt="Indigo Labs" className="h-7 w-auto max-w-[100px] object-contain" />
-            <span className="shrink-0 font-mono text-[12px] uppercase tracking-[0.15em] text-coral/85">CTO</span>
+            <img
+              src="/indigo-logo-white.png"
+              alt="Indigo Labs"
+              className="h-7 w-auto max-w-[100px] object-contain"
+            />
+            <span className="shrink-0 font-mono text-[12px] tracking-[0.15em] text-coral/85 uppercase">
+              CTO
+            </span>
           </div>
         </motion.div>
 
         {/* H1 Name */}
         <motion.h1
           variants={itemVariants}
-          className="font-sans text-6xl font-bold tracking-tight leading-none text-text md:text-8xl"
+          className="font-sans text-6xl leading-none font-bold tracking-tight text-text md:text-8xl"
           style={{ textShadow: "0 0 80px rgba(79,207,192,0.15)" }}
         >
           {t.hero.name[locale]}
@@ -104,7 +134,7 @@ export function Hero() {
         {/* Subheadline */}
         <motion.p
           variants={itemVariants}
-          className="max-w-[480px] whitespace-pre-line font-sans text-[clamp(13px,1.8vw,16px)] leading-relaxed text-text-dim"
+          className="max-w-[480px] font-sans text-[clamp(13px,1.8vw,16px)] leading-relaxed whitespace-pre-line text-text-dim"
         >
           {t.hero.sub[locale]}
         </motion.p>
@@ -145,7 +175,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 0.6 }}
       >
-        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-text-muted/50">
+        <span className="font-mono text-[10px] tracking-[0.25em] text-text-muted/50 uppercase">
           scroll
         </span>
         <motion.div
