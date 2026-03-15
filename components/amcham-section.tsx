@@ -63,7 +63,7 @@ function StatementModal({ open, onClose, locale }: { open: boolean; onClose: () 
 
               {/* Title */}
               <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-                AmCham Young Top Potential
+                AmCham Top Potential 2026
               </div>
               <h3 className="mb-6 text-xl font-bold text-text">
                 {t.amchamSection.statementTitle[locale]}
@@ -112,7 +112,7 @@ export function AmChamSection() {
           variants={fadeUp}
         >
           <div className="mb-4 inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-teal">
-            AmCham Young Top Potential
+            AmCham Top Potential 2026
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-text md:text-5xl">
             {t.amchamSection.title[locale]}

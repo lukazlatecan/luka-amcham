@@ -47,7 +47,7 @@ export const t = {
     },
     p2: {
       en: "From building high-performing product teams at Indigo Labs to developing autonomous collision-avoidance infrastructure at SpaceGuardian, my focus is always the same: align people, technology and vision into scalable systems.",
-      sl: "Od gradnje visoko učinkovitih produktnih ekip v Indigo Labs do razvoja avtonomne infrastrukture za izogibanje trkom pri SpaceGuardian – moj fokus je vedno enak: uskladiti ljudi, tehnologijo in vizijo v skalabilne sisteme.",
+      sl: "Od gradnje visoko učinkovitih produktnih ekip v Indigo Labs do razvoja avtonomne infrastrukture za izogibanje trkom pri SpaceGuardian, moj fokus je vedno enak: uskladiti ljudi, tehnologijo in vizijo v skalabilne sisteme.",
     },
     p3: {
       en: "I am at my best where engineering, business and leadership meet.",
@@ -216,10 +216,10 @@ export const t = {
       sl: "Z Indigo Labs sem se pridružil AmCham leta 2025 in se kmalu vključil v AmCham Young. Skupnost, pogovori in energija ljudi, ki resnično želijo premikati stvari naprej. To je eno najbolj dragocenih okolij, katerih del sem bil. Ta video dodajam kot spomin na začetek.",
     },
     contributionsLabel: { en: "Where I see my role", sl: "Kje vidim svojo vlogo" },
-    snowballBadge: { en: "Advocacy · Snowball Think Tank", sl: "Zagovorništvo · Snowball Think Tank" },
+    snowballBadge: { en: "AmCham YOUng · Snowball", sl: "AmCham YOUng · Snowball" },
     snowballDesc: {
-      en: "My contribution is Slovenia3000: a cross-sector initiative for long-term national thinking beyond political cycles. Where should Slovenia be in 50 or 100 years? Still at early beginnings, built with a small group of friends, I want to bring it into AmCham's advocacy work: use the direct channel to decision-makers to turn it into a real, structured national strategy initiative.",
-      sl: "Moj prispevek je Slovenija 3000: medsektorska iniciativa za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Kje bi morala biti Slovenija čez 50 ali 100 let? Še v zgodnji fazi, gradimo jo v majhni skupini prijateljev, a jo želim vpeti v zagovorništvo AmCham: uporabiti neposreden kanal do odločevalcev in jo pretvoriti v resnično, strukturirano nacionalno strateško iniciativo.",
+      en: "Slovenia3000 is something I started with a few friends, a small platform for long-term national thinking beyond political cycles. It is early and still finding its shape, but I would love to bring it into Snowball's conversations as one possible step toward giving this kind of thinking a more structured digital home.",
+      sl: "Slovenija 3000 sem začel z nekaj prijatelji, majhna platforma za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Je zgodnja in še išče svojo obliko, a jo bi rad vnesel v pogovore Snowball kot en možen korak k temu, da bi tovrstno razmišljanje dobilo bolj strukturirano digitalno prisotnost.",
     },
     ready4dBadge: { en: "Advocacy", sl: "Zagovorništvo" },
     ready4dDesc: {
@@ -239,8 +239,8 @@ export const t = {
     statementLabel: { en: "Read my written statement", sl: "Preberi mojo pisno izjavo" },
     statementTitle: { en: "My role and contribution", sl: "Moja vloga in prispevek" },
     statement: {
-      en: "I will contribute to four AmCham programs. Through advocacy and the Snowball Think Tank, I want to bring Slovenia3000 to life: a cross-sector initiative for long-term national thinking beyond political cycles. In Ready 4D Future, as co-founder of SpaceGuardian and a builder of AI systems, I will bring a practitioner's perspective to AI governance and deep-tech policy. In delegations, having been part of Startup Overseas 2025 in Colorado, I want to help early-stage startups arrive prepared and leave with real results. Through the Mentor Program, I would love to share what I've learned building two companies with a young startup entrepreneur. I see Top Potential as the first step, with the Young Leaders Club as the natural next chapter.",
-      sl: "Prispeval bom k štirim programom AmCham. Prek zagovorništva in Snowball Think Tank želim obuditi Slovenija 3000: medsektorsko iniciativo za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. V Ready 4D Future bom prispeval perspektivo praktika k urejanju AI in deep-tech politike. Na področju delegacij, ko sem bil del Startup Overseas 2025 v Koloradu, želim startupom pomagati, da pridejo pripravljeni in odidejo z resničnimi rezultati. Prek Mentor programa bi rad delil izkušnje gradnje dveh podjetij z mladim startup podjetnikom. Top Potential vidim kot prvi korak, Young Leaders Club pa kot naravno naslednje poglavje.",
+      en: "I will contribute across four AmCham areas. Through Snowball, I want to bring Slovenia3000 into the conversation as a small platform for long-term national thinking beyond political cycles. In Ready 4D Future, as co-founder of SpaceGuardian and a builder of AI systems, I will bring a practitioner's perspective to AI governance and deep-tech policy, helping the committee move from observation to concrete action. Having been part of Startup Overseas 2025 in Colorado, I saw first-hand how much preparation shapes outcomes. I want to help early-stage startups know their story before they land, read the market, and leave with a follow-up plan that actually converts. Through the AmCham Mentor program, I would love to share what I have learned building two companies with a young startup entrepreneur, from team dynamics and early product decisions to navigating uncertainty. I also plan to join the Young Leaders Club as the longer-term part of my AmCham journey.",
+      sl: "Prispeval bom na štirih področjih AmCham. Prek Snowball želim vpeljati Slovenija 3000 v pogovor kot majhno platformo za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. V Ready 4D Future bom prispeval perspektivo praktika k urejanju AI in deep-tech politike ter komisiji pomagal preiti od opazovanja k dejanskim ukrepom. Ker sem bil del Startup Overseas 2025 v Koloradu, sem iz prve roke videl, kako odločilna je priprava. Startupom želim pomagati, da poznajo svojo zgodbo pred pristakom, razumejo trg in odidejo z načrtom, ki dejansko vodi do rezultatov. Prek programa AmCham Mentor bi rad delil izkušnje gradnje dveh podjetij z mladim startup podjetnikom, od dinamike ekipe in prvih produktnih odločitev do navigacije negotovosti. Načrtujem tudi pridružitev Young Leaders Club kot dolgoročni del moje poti z AmCham.",
     },
   },
   cta: {
@@ -291,8 +291,8 @@ export const t = {
     slovenia3000: {
       title: { en: "Slovenia 3000", sl: "Slovenija 3000" },
       desc: {
-        en: "Slovenia lacks a long-term national strategy. Every government erases what the previous one built, without systematic goals for the future. Slovenia 3000 is my side project to change that, a platform for thinking about where Slovenia should be in 50, 100, 1000 years.",
-        sl: "Slovenija nima dolgoročne nacionalne strategije. Vsaka vlada izbriše, kar je prejšnja zgradila, brez sistematičnih ciljev za prihodnost. Slovenija 3000 je moj stranski projekt za spremembo tega, platforma za razmišljanje o tem, kje bi morala biti Slovenija čez 50, 100, 1000 let.",
+        en: "Long-term national thinking rarely finds a home outside of political cycles. Slovenia 3000 is a side project I started with friends, a simple online space for exploring the question: where could Slovenia be in 50, 100, or 1000 years? Nothing more ambitious than starting a conversation worth having.",
+        sl: "Dolgoročno razmišljanje o prihodnosti redko najde dom izven političnih ciklov. Slovenija 3000 je stranski projekt, ki sem ga začel s prijatelji, preprost spletni prostor za raziskovanje vprašanja: kje bi lahko bila Slovenija čez 50, 100 ali 1000 let? Nič bolj ambicioznega kot začeti pogovor, ki se ga splača imeti.",
       },
       url: "https://slovenia3000.si",
     },

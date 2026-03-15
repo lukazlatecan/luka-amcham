@@ -61,7 +61,7 @@ export function Hero() {
         <motion.div variants={itemVariants} className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
           <img src="/amcham-logo-white.svg" alt="AmCham Slovenia" className="h-8 w-auto object-contain sm:h-10" />
           <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-text-muted sm:text-[13px]">
-            Young Top Potential 2026
+            Top Potential 2026
           </span>
         </motion.div>
 
