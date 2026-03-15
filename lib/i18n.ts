@@ -35,11 +35,6 @@ export const t = {
     title: { en: "In numbers", sl: "V številkah" },
     companies: { en: "Companies co-founded", sl: "Soustanovljena podjetja" },
     years: { en: "Years in software", sl: "Let v programski opremi" },
-    products: {
-      en: "Products delivered globally",
-      sl: "Produkti dostavljeni globalno",
-    },
-    cassini: { en: "CASSINI winner for space innovation", sl: "CASSINI zmagovalec za vesoljske inovacije" },
   },
   narrative: {
     title: {
@@ -48,15 +43,15 @@ export const t = {
     },
     p1: {
       en: "My career has been driven by one question: how do we turn advanced technology into real-world impact?",
-      sl: "Mojo kariero poganja eno vpra\u0161anje: kako napredno tehnologijo spremenimo v resnicni vpliv?",
+      sl: "Mojo kariero poganja eno vprašanje: kako napredno tehnologijo spremenimo v resničen vpliv?",
     },
     p2: {
       en: "From building high-performing product teams at Indigo Labs to developing autonomous collision-avoidance infrastructure at SpaceGuardian, my focus is always the same: align people, technology and vision into scalable systems.",
-      sl: "Od gradnje visoko ucinkovitih produktnih ekip v Indigo Labs do razvoja avtonomne infrastrukture za izogibanje trkom pri SpaceGuardian \u2013 moj fokus je vedno enak: uskladiti ljudi, tehnologijo in vizijo v skalabilne sisteme.",
+      sl: "Od gradnje visoko učinkovitih produktnih ekip v Indigo Labs do razvoja avtonomne infrastrukture za izogibanje trkom pri SpaceGuardian – moj fokus je vedno enak: uskladiti ljudi, tehnologijo in vizijo v skalabilne sisteme.",
     },
     p3: {
       en: "I am at my best where engineering, business and leadership meet.",
-      sl: "Najboljsi sem tam, kjer se srecajo inzenirstvo, poslovanje in vodenje.",
+      sl: "Najboljši sem tam, kjer se srečajo inženirstvo, poslovanje in vodenje.",
     },
   },
   build: {
@@ -64,30 +59,30 @@ export const t = {
       tag: { en: "CTO", sl: "CTO" },
       title: {
         en: "Building teams that build great products.",
-        sl: "Gradim ekipe, ki gradijo odlicne produkte.",
+        sl: "Gradim ekipe, ki gradijo odlične produkte.",
       },
       p1: {
         en: "At Indigo Labs we partner with companies that need more than external vendors. We embed into their environment, take ownership and help them deliver complex digital products faster and better.",
-        sl: "Pri Indigo Labs sodelujemo s podjetji, ki potrebujejo vec kot le zunanje izvajalce. Vkljucimo se v njihovo okolje, prevzamemo odgovornost in jim pomagamo hitreje in bolje dostaviti kompleksne digitalne produkte.",
+        sl: "Pri Indigo Labs sodelujemo s podjetji, ki potrebujejo več kot le zunanje izvajalce. Vključimo se v njihovo okolje, prevzamemo odgovornost in jim pomagamo hitreje in bolje dostaviti kompleksne digitalne produkte.",
       },
       p2: {
         en: "Our strength is not only in technology. It is in creating aligned, autonomous and high-performing teams.",
-        sl: "Na\u0161a moc ni le v tehnologiji. Je v ustvarjanju usklajenih, avtonomnih in visoko ucinkovitih ekip.",
+        sl: "Naša moč ni le v tehnologiji. Je v ustvarjanju usklajenih, avtonomnih in visoko učinkovitih ekip.",
       },
     },
     space: {
       tag: { en: "CEO", sl: "CEO" },
       title: {
         en: "Making space sustainable through autonomous decision systems.",
-        sl: "Trajnostni vesolje skozi avtonomne odlocitvene sisteme.",
+        sl: "Trajnostno vesolje skozi avtonomne odločitvene sisteme.",
       },
       p1: {
         en: "Space is becoming the next critical infrastructure layer for our society. At SpaceGuardian we are developing AI-driven coordination that enables satellites to avoid collisions automatically and fairly, using a bidding system where operators negotiate right-of-way in real time.",
-        sl: "Vesolje postaja naslednja kriticna infrastrukturna plast na\u0161e druzbe. Pri SpaceGuardian razvijamo AI-vodeno koordinacijo, ki satelitom omogoca avtomatsko in posteno izogibanje trkom, s sistemom licitiranja, kjer operaterji v realnem casu pogajajo prednostni prehod.",
+        sl: "Vesolje postaja naslednja kritična infrastrukturna plast naše družbe. Pri SpaceGuardian razvijamo AI-vodeno koordinacijo, ki satelitom omogoča avtomatsko in pošteno izogibanje trkom, s sistemom licitiranja, kjer operaterji v realnem času pogajajo prednostni prehod.",
       },
       p2: {
         en: "Our vision is clear: a safe, scalable and economically sustainable orbit.",
-        sl: "Na\u0161a vizija je jasna: varna, skalabilna in ekonomsko trajnostna orbita.",
+        sl: "Naša vizija je jasna: varna, skalabilna in ekonomsko trajnostna orbita.",
       },
     },
   },
@@ -98,7 +93,7 @@ export const t = {
         year: { en: "2016", sl: "2016" },
         title: {
           en: "Started in software engineering",
-          sl: "Zacel v programskem inzenirstvu",
+          sl: "Začel v programskem inženirstvu",
         },
         desc: {
           en: "Building foundations in full-stack development",
@@ -113,7 +108,7 @@ export const t = {
         },
         desc: {
           en: "Building organisations that build great products",
-          sl: "Gradnja organizacij, ki gradijo odlicne produkte",
+          sl: "Gradnja organizacij, ki gradijo odlične produkte",
         },
       },
       {
@@ -151,46 +146,10 @@ export const t = {
       },
     ],
   },
-  lead: {
-    title: { en: "How I lead", sl: "Kako vodim" },
-    cards: [
-      {
-        title: { en: "Systems thinking", sl: "Sistemsko razmisljanje" },
-        desc: {
-          en: "I connect technology, business goals and team dynamics into one coherent direction.",
-          sl: "Povezujem tehnologijo, poslovne cilje in dinamiko ekipe v eno koherentno smer.",
-        },
-      },
-      {
-        title: { en: "Ownership culture", sl: "Kultura odgovornosti" },
-        desc: {
-          en: "The best results come from empowered teams, not control.",
-          sl: "Najboljsi rezultati prihajajo iz opolnomocenih ekip, ne iz nadzora.",
-        },
-      },
-      {
-        title: {
-          en: "Long-term value over short-term output",
-          sl: "Dolgorocna vrednost pred kratkorocnim rezultatom",
-        },
-        desc: {
-          en: "Sustainable impact always wins.",
-          sl: "Trajnostni vpliv vedno zmaga.",
-        },
-      },
-      {
-        title: { en: "Clarity in complexity", sl: "Jasnost v kompleksnosti" },
-        desc: {
-          en: "My role as a leader is to make difficult things understandable and actionable.",
-          sl: "Moja vloga vodje je narediti tezke stvari razumljive in izvedljive.",
-        },
-      },
-    ],
-  },
   testimonials: {
     title: {
-      en: "How colleagues experience working with me",
-      sl: "Kako sodelavci dozivljajo delo z mano",
+      en: "What colleagues say about working with me",
+      sl: "Kako sodelavci doživljajo delo z mano",
     },
     items: [
       {
@@ -198,7 +157,7 @@ export const t = {
           en: "Luka is an excellent leader whom both colleagues and clients can trust. He transforms complex challenges into concrete, actionable steps. He stays calm and focused even under tight deadlines. His ability to recognize potential in people and entrust them with responsibility builds team confidence and fosters a culture of collaboration and mutual respect.",
           sl: "Luka predstavlja odličnega vodjo, ki mu lahko zaupamo tako sodelavci kot naročniki projekta. Kot vodja zna pretvoriti kompleksne izzive v konkretne, izvedljive korake. Pri tem ohranja mirnost in jasno usmeritev tudi takrat, ko so roki kratki ali okoliščine zahtevne. Posebej izstopa njegova sposobnost, da v ljudeh prepozna potencial in jim zaupa odgovornost. S tem gradi samozavest ekipe ter spodbuja kulturo sodelovanja in medsebojnega spoštovanja.",
         },
-        author: { en: "Jan Krivec, Colleague", sl: "Jan Krivec, sodelavec" },
+        author: { en: "Jan Krivec, Indigo Labs", sl: "Jan Krivec, Indigo Labs" },
         photo: "/jankrivec.jpeg",
       },
       {
@@ -206,7 +165,7 @@ export const t = {
           en: "What stands out most about Luka is his ability to rapidly adopt new technologies. While others are still wondering if something is mature enough, he's already testing it and thinking about how to meaningfully integrate it. He leads by example. He doesn't talk about how things should be done, he shows it. His critical thinking means decisions are never made superficially. I'm convinced that Luka, with his combination of technical knowledge, vision, character, and attitude toward people, represents exactly what Top Potential should mean.",
           sl: "Pri Luki najbolj izstopa njegova sposobnost hitrega osvajanja novih tehnologij. Medtem ko se drugi še sprašujemo, ali je nekaj že dovolj zrelo za uporabo, on to že testira, razume in razmišlja, kako lahko to smiselno vključimo v naše projekte. Ni samo tehnično izjemno podkovan, ampak vodi z zgledom. Ne govori, kako bi se stvari morale delati, pokaže. Njegovo kritično razmišljanje pomeni, da odločitev nikoli ne sprejema površinsko, ampak vedno premisli širšo sliko in posledice. Prepričan sem, da Luka s svojo kombinacijo tehničnega znanja, vizije, karakterja in odnosa do ljudi predstavlja točno to, kar naj bi pomenil Top Potencial.",
         },
-        author: { en: "Uroš Lesjak, Colleague", sl: "Uroš Lesjak, sodelavec" },
+        author: { en: "Uroš Lesjak, Indigo Labs", sl: "Uroš Lesjak, Indigo Labs" },
         photo: "/uroslesjak.jpeg",
       },
     ],
@@ -233,7 +192,7 @@ export const t = {
           sl: "Z Luko delam že preko 5 let in vsakič me preseneti z ambicioznostjo in trudom, ki ga vlaga v doseganje rezultatov. Kot pravi podjetnik se preizkuša v mnogo vlogah, od same prodaje in podjetnega razmišljanja, coachinga sodelavcev do deep-tech razvoja, ki je ne samo njegov poklic ampak tudi velika strast. Težko si predstavljam boljšega kandidata za naziv AmCham Top Potencial leta 2026.",
         },
         author: { en: "Rok Lenardič", sl: "Rok Lenardič" },
-        role: { en: "Director, Indigo Labs", sl: "Direktor, Indigo Labs" },
+        role: { en: "CEO, Indigo Labs", sl: "CEO, Indigo Labs" },
         pdfUrl: "/izjava-podpore-rok.pdf",
         photo: "/roklenardic.jpeg",
       },
@@ -243,109 +202,59 @@ export const t = {
           sl: "Pri Luki me vedno znova navdušuje kombinacija radovednosti in odgovornosti. Pri sodelovanju z njim hitro opaziš, da razmišlja premišljeno in strukturirano, tudi v zahtevnih situacijah. Prav zato njegove rešitve niso le učinkovite, ampak tudi trajne. Tak pristop ustvarja zaupanje pri ljudeh, s katerimi sodeluje. Poleg strokovnosti Luko odlikuje tudi pripravljenost deliti znanje in pomagati drugim. Prepričan sem, da Luka s svojim znanjem, integriteto in načinom razmišljanja predstavlja profil posameznika, ki lahko pomembno prispeva k razvoju okolja, v katerem deluje.",
         },
         author: { en: "dr. Janez Lapajne", sl: "dr. Janez Lapajne" },
-        role: { en: "", sl: "" },
+        role: { en: "Head of AI, SpaceGuardian", sl: "Head of AI, SpaceGuardian" },
         pdfUrl: "/izjava-podpore-janez.pdf",
         photo: "/janezlapajne.jpeg",
       },
     ],
   },
-  amcham: {
-    title: { en: "Why AmCham", sl: "Zakaj AmCham" },
-    bring: {
-      title: { en: "What I bring", sl: "Kaj prinesem" },
-      items: {
-        en: [
-          "A founder mindset with corporate execution capability",
-          "A deep-tech perspective on future industries",
-          "Experience in building high-performance teams",
-        ],
-        sl: [
-          "Podjetniski nacin razmisljanja s sposobnostjo korporativne izvedbe",
-          "Deep-tech perspektivo na prihodnje industrije",
-          "Izkusnje pri gradnji visoko ucinkovitih ekip",
-        ],
-      },
+  amchamSection: {
+    title: { en: "My AmCham journey", sl: "Moja pot z AmCham" },
+    introLabel: { en: "How it started", sl: "Kako se je začelo" },
+    intro: {
+      en: "I joined AmCham with Indigo Labs in 2025 and quickly found my way into AmCham Young. The community, the conversations, and the energy of people who are genuinely trying to move things forward. It has been one of the most valuable environments I have been part of. I've included a video from when it all started.",
+      sl: "Z Indigo Labs sem se pridružil AmCham leta 2025 in se kmalu vključil v AmCham Young. Skupnost, pogovori in energija ljudi, ki resnično želijo premikati stvari naprej. To je eno najbolj dragocenih okolij, katerih del sem bil. Ta video dodajam kot spomin na začetek.",
     },
-    seek: {
-      title: { en: "What I seek", sl: "Kaj ischem" },
-      items: {
-        en: [
-          "Stronger collaboration between startups and established companies",
-          "A platform for global impact from Slovenia",
-          "A network that turns ideas into action",
-        ],
-        sl: [
-          "Mocnejse sodelovanje med startupi in uveljavljenimi podjetji",
-          "Platformo za globalni vpliv iz Slovenije",
-          "Mrezo, ki ideje spreminja v dejanja",
-        ],
-      },
+    contributionsLabel: { en: "Where I see my role", sl: "Kje vidim svojo vlogo" },
+    snowballBadge: { en: "Advocacy · Snowball Think Tank", sl: "Zagovorništvo · Snowball Think Tank" },
+    snowballDesc: {
+      en: "My contribution is Slovenia3000: a cross-sector initiative for long-term national thinking beyond political cycles. Where should Slovenia be in 50 or 100 years? Still at early beginnings, built with a small group of friends, I want to bring it into AmCham's advocacy work: use the direct channel to decision-makers to turn it into a real, structured national strategy initiative.",
+      sl: "Moj prispevek je Slovenija 3000: medsektorska iniciativa za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Kje bi morala biti Slovenija čez 50 ali 100 let? Še v zgodnji fazi, gradimo jo v majhni skupini prijateljev, a jo želim vpeti v zagovorništvo AmCham: uporabiti neposreden kanal do odločevalcev in jo pretvoriti v resnično, strukturirano nacionalno strateško iniciativo.",
     },
-    build: {
-      title: { en: "What I will build", sl: "Kaj bom zgradil" },
-      items: {
-        en: [
-          "Initiatives connecting business with emerging technologies like AI and space",
-          "A community focused on execution, not only discussion",
-          "New opportunities for the next generation of leaders",
-        ],
-        sl: [
-          "Iniciative, ki povezujejo poslovanje z nastajajocimi tehnologijami, kot sta AI in vesolje",
-          "Skupnost, osredotoceno na izvedbo, ne le na razpravo",
-          "Nove priložnosti za naslednjo generacijo voditeljev",
-        ],
-      },
+    ready4dBadge: { en: "Advocacy", sl: "Zagovorništvo" },
+    ready4dDesc: {
+      en: "As co-founder of SpaceGuardian and a builder of AI systems, I bring a practitioner's perspective to policy and strategy conversations about the technologies defining Slovenia's next decade. I want to help the Ready 4D Future committee move from observation to action: how do we attract AI talent, shape regulation that enables rather than blocks innovation, and position Slovenian deep-tech as a contributor rather than a follower in European tech policy.",
+      sl: "Kot soustanovitelj SpaceGuardian in graditelj AI sistemov prinašam perspektivo praktika v razprave o politiki in strategiji za tehnologije, ki bodo določale naslednje desetletje v Sloveniji. Komisiji Ready 4D Future želim pomagati preiti od opazovanja k ukrepanju: kako privabiti AI talent, oblikovati regulacijo, ki inovacije omogoča namesto zavira, in postaviti slovenski deep-tech kot sooblikovalca, ne sledilca evropske tehnološke politike.",
+    },
+    delegationBadge: { en: "International Collaboration", sl: "Mednarodno sodelovanje" },
+    delegationDesc: {
+      en: "I was part of Startup Overseas 2025: Colorado, USA. Seeing how much preparation determines the outcome, I want to help early-stage startups make the most of these delegations: know their story before they land, understand the market context, be ready to pitch to a local audience, and leave with a follow-up plan that has real outcomes attached.",
+      sl: "Bil sem del Startup Overseas 2025: Kolorado, ZDA. Ker sem videl, kako odločilna je priprava, želim startupom pomagati izkoristiti delegacije: poznati svojo zgodbo pred pristakom, razumeti tržni kontekst, biti pripravljeni na nastop pred lokalnim občinstvom in imeti načrt nadaljnjih korakov z jasnimi rezultati.",
+    },
+    mentorBadge: { en: "AmCham YOUng", sl: "AmCham YOUng" },
+    mentorDesc: {
+      en: "I would love to become a mentor to a young startup entrepreneur through AmCham's Mentor Program. Sharing what I've learned building Indigo Labs and SpaceGuardian: from team dynamics and product development to navigating uncertainty and finding the right investors.",
+      sl: "Rad bi postal mentor mlademu startup podjetniku v okviru programa AmCham Mentor. Delil bi, kar sem se naučil pri gradnji Indigo Labs in SpaceGuardian: od dinamike ekip in razvoja produktov do navigacije negotovosti in iskanja pravih investitorjev.",
+    },
+    statementLabel: { en: "Read my written statement", sl: "Preberi mojo pisno izjavo" },
+    statementTitle: { en: "My role and contribution", sl: "Moja vloga in prispevek" },
+    statement: {
+      en: "I will contribute to four AmCham programs. Through advocacy and the Snowball Think Tank, I want to bring Slovenia3000 to life: a cross-sector initiative for long-term national thinking beyond political cycles. In Ready 4D Future, as co-founder of SpaceGuardian and a builder of AI systems, I will bring a practitioner's perspective to AI governance and deep-tech policy. In delegations, having been part of Startup Overseas 2025 in Colorado, I want to help early-stage startups arrive prepared and leave with real results. Through the Mentor Program, I would love to share what I've learned building two companies with a young startup entrepreneur. I see Top Potential as the first step, with the Young Leaders Club as the natural next chapter.",
+      sl: "Prispeval bom k štirim programom AmCham. Prek zagovorništva in Snowball Think Tank želim obuditi Slovenija 3000: medsektorsko iniciativo za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. V Ready 4D Future bom prispeval perspektivo praktika k urejanju AI in deep-tech politike. Na področju delegacij, ko sem bil del Startup Overseas 2025 v Koloradu, želim startupom pomagati, da pridejo pripravljeni in odidejo z resničnimi rezultati. Prek Mentor programa bi rad delil izkušnje gradnje dveh podjetij z mladim startup podjetnikom. Top Potential vidim kot prvi korak, Young Leaders Club pa kot naravno naslednje poglavje.",
     },
   },
-  plan: {
+  cta: {
     title: {
-      en: "My first year as AmCham Top Potential",
-      sl: "Moje prvo leto kot AmCham Top Potencial",
+      en: "Let's build what comes next.",
+      sl: "Zgradimo, kar pride naslednje.",
     },
-    initiative: {
-      label: { en: "Initiative", sl: "Iniciativa" },
-      value: {
-        en: "Bridging deep-tech startups and corporates",
-        sl: "Povezovanje deep-tech startupov in korporacij",
-      },
-    },
-    goal: {
-      label: { en: "Goal", sl: "Cilj" },
-      value: {
-        en: "Create a repeatable collaboration model that enables faster innovation adoption.",
-        sl: "Ustvariti ponovljiv model sodelovanja, ki omogoca hitrejse prevzemanje inovacij.",
-      },
-    },
-    impact: {
-      label: { en: "Impact", sl: "Vpliv" },
-      items: {
-        en: [
-          "Stronger competitiveness of the Slovenian business environment",
-          "More opportunities for young professionals",
-          "Real business outcomes from the AmCham network",
-        ],
-        sl: [
-          "Mocnejsa konkurencnost slovenskega poslovnega okolja",
-          "Vec priložnosti za mlade strokovnjake",
-          "Dejanski poslovni rezultati iz mreze AmCham",
-        ],
-      },
-    },
-  },
-  video: {
-    title: {
-      en: "The problem I want to help solve",
-      sl: "Problem, ki ga zelim pomagati resiti",
-    },
-    text: {
-      en: "Slovenia has the knowledge and talent to build globally relevant companies. What we need is stronger alignment between technology, capital and leadership. This is where I see my role in the AmCham community.",
-      sl: "Slovenija ima znanje in talent za gradnjo globalno relevantnih podjetij. Kar potrebujemo, je mocnejsa usklajenost med tehnologijo, kapitalom in vodenjem. Tu vidim svojo vlogo v skupnosti AmCham.",
-    },
+    cv: { en: "Download CV", sl: "Prenesi življenjepis" },
+    linkedin: { en: "Connect on LinkedIn", sl: "Povezi se na LinkedIn" },
   },
   personal: {
     text: {
       en: "I believe leadership is not about position. It is about creating environments where great people can do their best work and where technology creates meaningful progress for society. This is the impact I want to scale through AmCham.",
-      sl: "Verjamem, da vodenje ni vprasanje pozicije. Gre za ustvarjanje okolij, kjer lahko odlicni ljudje opravijo svoje najboljse delo in kjer tehnologija ustvarja smiseln napredek za druzbo. To je vpliv, ki ga zelim skalirati skozi AmCham.",
+      sl: "Verjamem, da vodenje ni vprašanje pozicije. Gre za ustvarjanje okolij, kjer lahko odlični ljudje opravijo svoje najboljše delo in kjer tehnologija ustvarja smiseln napredek za družbo. To je vpliv, ki ga želim skalirati skozi AmCham.",
     },
   },
   beyondWork: {
@@ -387,49 +296,6 @@ export const t = {
       },
       url: "https://slovenia3000.si",
     },
-  },
-  amchamSection: {
-    title: { en: "My AmCham journey", sl: "Moja pot z AmCham" },
-    introLabel: { en: "How it started", sl: "Kako se je začelo" },
-    intro: {
-      en: "I joined AmCham with Indigo Labs in 2025 and quickly found my way into AmCham Young. The community, the conversations, and the energy of people who are genuinely trying to move things forward. It has been one of the most valuable environments I have been part of. Adding this video here as a fresh reminder of where it all started.",
-      sl: "Z Indigo Labs sem se pridružil AmCham leta 2025 in se kmalu vključil v AmCham Young. Skupnost, pogovori in energija ljudi, ki resnično želijo premikati stvari naprej. To je eno najbolj dragocenih okolij, katerih del sem bil. Ta video dodajam kot svež spomin na začetek programa.",
-    },
-    contributionsLabel: { en: "Where I see my role", sl: "Kje vidim svojo vlogo" },
-    snowballBadge: { en: "Advocacy · Snowball Think Tank", sl: "Zagovorništvo · Snowball Think Tank" },
-    snowballDesc: {
-      en: "My contribution is Slovenia3000: a cross-sector initiative for long-term national thinking beyond political cycles. Where should Slovenia be in 50 or 100 years? Still at early beginnings, built with a small group of friends, I want to bring it into AmCham's advocacy work: use the direct channel to decision-makers to turn it into a real, structured national strategy initiative.",
-      sl: "Moj prispevek je Slovenija 3000: medsektorska iniciativa za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Kje bi morala biti Slovenija čez 50 ali 100 let? Še v zgodnji fazi, gradimo jo v majhni skupini prijateljev, a jo želim vpeti v zagovorništvo AmCham: uporabiti neposreden kanal do odločevalcev in jo pretvoriti v resnično, strukturirano nacionalno strateško iniciativo.",
-    },
-    ready4dBadge: { en: "Advocacy", sl: "Zagovorništvo" },
-    ready4dDesc: {
-      en: "As co-founder of SpaceGuardian and a builder of AI systems, I bring a practitioner's perspective to policy and strategy conversations about the technologies defining Slovenia's next decade. I want to help the committee move from observation to action: how do we attract AI talent, shape regulation that enables rather than blocks innovation, and position Slovenian deep-tech as a contributor rather than a follower in European tech policy.",
-      sl: "Kot soustanovitelj SpaceGuardian in graditelj AI sistemov prinašam perspektivo praktika v razprave o politiki in strategiji za tehnologije, ki bodo določale naslednje desetletje v Sloveniji. Komisiji želim pomagati preiti od opazovanja k ukrepanju: kako privabiti AI talent, oblikovati regulacijo, ki inovacije omogoča namesto zavira, in postaviti slovenski deep-tech kot sooblikovalca, ne sledilca evropske tehnološke politike.",
-    },
-    delegationBadge: { en: "International Collaboration", sl: "Mednarodno sodelovanje" },
-    delegationDesc: {
-      en: "I was part of Startup Overseas 2025: Colorado, ZDA. Seeing how much preparation determines the outcome, I want to help early-stage startups make the most of these delegations: know their story before they land, understand the market context, be ready to pitch in the local language of business, and have a follow-up plan that actually leads somewhere.",
-      sl: "Bil sem del Startup Overseas 2025: Kolorado, ZDA. Ker sem videl, kako odločilna je priprava, želim startupom pomagati izkoristiti delegacije: poznati svojo zgodbo pred pristanek, razumeti tržni kontekst, biti pripravljeni na nastop v lokalnem poslovnem jeziku in imeti načrt nadaljnjih korakov, ki dejansko vodi nekam.",
-    },
-    mentorBadge: { en: "AmCham YOUng", sl: "AmCham YOUng" },
-    mentorDesc: {
-      en: "I would love to become a mentor to a young startup entrepreneur through AmCham's Mentor Program. Sharing what I've learned building Indigo Labs and SpaceGuardian: from team dynamics and product development to navigating uncertainty and finding the right investors.",
-      sl: "Rad bi postal mentor mlademu startup podjetniku v okviru programa AmCham Mentor. Delil bi, kar sem se naučil pri gradnji Indigo Labs in SpaceGuardian: od dinamike ekip in razvoja produktov do navigacije negotovosti in iskanja pravih investitorjev.",
-    },
-    statementLabel: { en: "Read my written statement", sl: "Preberi mojo pisno izjavo" },
-    statementTitle: { en: "My role and contribution", sl: "Moja vloga in prispevek" },
-    statement: {
-      en: "I will contribute to four AmCham programs. Through advocacy and the Snowball Think Tank, I want to bring Slovenia3000 to life: a cross-sector initiative for long-term national thinking beyond political cycles. In Ready 4D Future, as co-founder of SpaceGuardian and a builder of AI systems, I will bring a practitioner's perspective to AI governance and deep-tech policy. In delegations, having been part of Startup Overseas 2025 in Colorado, I want to help early-stage startups arrive prepared and leave with real results. Through the Mentor Program, I would love to share what I've learned building two companies with a young startup entrepreneur. I see Top Potential as the first step, with the Young Leaders Club as the natural next chapter.",
-      sl: "Prispeval bom k štirim programom AmCham. Prek zagovorništva in Snowball Think Tank želim obuditi Slovenija 3000: medsektorsko iniciativo za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. V Ready 4D Future bom prispeval perspektivo praktika k urejanju AI in deep-tech politike. Na področju delegacij, ko sem bil del Startup Overseas 2025 v Koloradu, želim startupom pomagati, da pridejo pripravljeni in odidejo z resničnimi rezultati. Prek Mentor programa bi rad delil izkušnje gradnje dveh podjetij z mladim startup podjetnikom. Top Potential vidim kot prvi korak, Young Leaders Club pa kot naravno naslednje poglavje.",
-    },
-  },
-  cta: {
-    title: {
-      en: "Let's build what comes next.",
-      sl: "Zgradimo, kar pride naslednje.",
-    },
-    cv: { en: "Download CV", sl: "Prenesi zivljenjepis" },
-    linkedin: { en: "Connect on LinkedIn", sl: "Povezi se na LinkedIn" },
   },
   nav: {
     journey: { en: "The Story", sl: "Zgodba" },
