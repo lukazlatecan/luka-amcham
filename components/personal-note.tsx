@@ -13,7 +13,7 @@ export function PersonalNote() {
   return (
     <section
       ref={ref}
-      className="px-6 py-32"
+      className="px-6 py-16"
     >
       <motion.div
         initial={{ opacity: 0 }}

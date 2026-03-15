@@ -19,10 +19,8 @@ function TimelineItem({
 }) {
   return (
     <motion.div
-      className={`flex flex-col gap-1 ${
-        direction === "above"
-          ? "items-end text-right pb-6"
-          : "items-start text-left pt-6"
+      className={`flex flex-col gap-1 items-start text-left ${
+        direction === "above" ? "pb-2" : "pt-2"
       }`}
       initial={{ opacity: 0, y: direction === "above" ? 20 : -20 }}
       animate={
@@ -118,7 +116,7 @@ export function Timeline() {
     <section
       id="timeline"
       ref={sectionRef}
-      className="relative overflow-hidden py-28"
+      className="relative overflow-hidden py-14"
     >
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         {/* section header */}
@@ -145,7 +143,7 @@ export function Timeline() {
               style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}
             >
               {items.map((item, i) => (
-                <div key={i} className="flex justify-center">
+                <div key={i} className="flex justify-start pl-2">
                   {desktopLayout[i] === "above" ? (
                     <TimelineItem
                       item={item}
@@ -176,26 +174,30 @@ export function Timeline() {
               />
 
               {/* dots */}
-              <div className="absolute inset-x-0 flex h-full items-center justify-between">
+              <div
+                className="absolute inset-x-0 grid h-full items-center"
+                style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}
+              >
                 {items.map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="h-4 w-4 rounded-full bg-teal"
-                    style={{
-                      boxShadow: "0 0 12px rgba(79,207,192,0.5), 0 0 24px rgba(79,207,192,0.2)",
-                    }}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={
-                      lineInView
-                        ? { scale: 1, opacity: 1 }
-                        : { scale: 0, opacity: 0 }
-                    }
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.3 + i * 0.15,
-                      ease: "backOut",
-                    }}
-                  />
+                  <div key={i} className="flex justify-start pl-2">
+                    <motion.div
+                      className="h-4 w-4 rounded-full bg-teal"
+                      style={{
+                        boxShadow: "0 0 12px rgba(79,207,192,0.5), 0 0 24px rgba(79,207,192,0.2)",
+                      }}
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={
+                        lineInView
+                          ? { scale: 1, opacity: 1 }
+                          : { scale: 0, opacity: 0 }
+                      }
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.3 + i * 0.15,
+                        ease: "backOut",
+                      }}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
@@ -206,7 +208,7 @@ export function Timeline() {
               style={{ gridTemplateColumns: `repeat(${items.length}, 1fr)` }}
             >
               {items.map((item, i) => (
-                <div key={i} className="flex justify-center">
+                <div key={i} className="flex justify-start pl-2">
                   {desktopLayout[i] === "below" ? (
                     <TimelineItem
                       item={item}

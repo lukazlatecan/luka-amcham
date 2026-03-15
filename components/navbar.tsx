@@ -13,6 +13,8 @@ const links: NavLink[] = [
   { labelKey: "journey", href: "#journey" },
   { labelKey: "companies", href: "#companies" },
   { labelKey: "leadership", href: "#leadership" },
+  { labelKey: "testimonials", href: "#testimonials" },
+  { labelKey: "beyond", href: "#beyond" },
   { labelKey: "amcham", href: "#amcham" },
   { labelKey: "contact", href: "#contact" },
 ]
@@ -99,6 +101,7 @@ function MobileDrawer({
                       : "border-border bg-transparent text-text-muted hover:border-teal/30 hover:text-text-dim"
                   }`}
                 >
+                  <span className="mr-1">{l === "en" ? "🇬🇧" : "🇸🇮"}</span>
                   {l}
                 </button>
               ))}
@@ -225,6 +228,7 @@ export function Navbar() {
                       : "bg-transparent text-text-muted hover:text-text-dim"
                   }`}
                 >
+                  <span className="mr-1">{l === "en" ? "🇬🇧" : "🇸🇮"}</span>
                   {l}
                 </button>
               ))}

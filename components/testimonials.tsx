@@ -32,8 +32,6 @@ function TestimonialCard({
   locale: "en" | "sl"
   inView: boolean
 }) {
-  const initial = item.author[locale].charAt(0)
-
   return (
     <motion.div
       className="rounded-2xl border border-border p-8"
@@ -61,16 +59,8 @@ function TestimonialCard({
       {/* author */}
       <div className="flex items-center gap-3">
         {/* avatar circle with gradient + initial */}
-        <div
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(79,207,192,0.25), rgba(240,76,92,0.25))",
-          }}
-        >
-          <span className="font-mono text-xs font-bold text-teal">
-            {initial}
-          </span>
+        <div className="h-9 w-9 flex-shrink-0 overflow-hidden rounded-full border border-border">
+          <img src={item.photo} alt={item.author[locale]} className="h-full w-full object-cover" />
         </div>
 
         <span className="text-xs font-mono uppercase tracking-widest text-text-dim">
@@ -86,7 +76,7 @@ export function Testimonials() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
 
   return (
-    <section ref={ref} className="relative py-28">
+    <section id="testimonials" ref={ref} className="relative py-14">
       <div className="mx-auto max-w-5xl px-6">
         {/* heading */}
         <motion.div
@@ -116,17 +106,6 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* bottom note */}
-        <motion.p
-          className="mt-10 text-center text-xs italic text-text-muted"
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          {locale === "en"
-            ? "Testimonials shared with permission."
-            : "Priporocila objavljena z dovoljenjem."}
-        </motion.p>
       </div>
     </section>
   )

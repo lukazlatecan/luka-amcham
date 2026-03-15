@@ -42,28 +42,15 @@ const hobbyIcons: Record<string, React.ReactNode> = {
   ),
 }
 
-function PhotoPlaceholder({ label, delay, inView }: { label: string; delay: number; inView: boolean }) {
+function Photo({ src, alt, delay, inView }: { src: string; alt: string; delay: number; inView: boolean }) {
   return (
     <motion.div
-      className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-border"
-      style={{
-        background: "linear-gradient(135deg, rgba(79,207,192,0.06) 0%, rgba(240,76,92,0.04) 100%)",
-      }}
+      className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border"
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
       transition={{ duration: 0.6, ease: EASE, delay }}
     >
-      {/* Placeholder icon */}
-      <div className="flex h-full w-full flex-col items-center justify-center gap-3">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" className="text-text-muted/30">
-          <rect x="3" y="3" width="18" height="18" rx="2" />
-          <circle cx="8.5" cy="8.5" r="1.5" />
-          <path d="M21 15l-5-5L5 21" />
-        </svg>
-        <span className="px-4 text-center font-mono text-[10px] uppercase tracking-widest text-text-muted/40">
-          {label}
-        </span>
-      </div>
+      <img src={src} alt={alt} className="h-full w-full object-cover" />
     </motion.div>
   )
 }
@@ -73,7 +60,7 @@ export function BeyondWork() {
   const [ref, inView] = useInView({ threshold: 0.08, triggerOnce: true })
 
   return (
-    <section ref={ref} className="relative py-28">
+    <section id="beyond" ref={ref} className="relative py-14">
       <div className="mx-auto max-w-6xl px-6">
         {/* Heading */}
         <motion.div
@@ -105,12 +92,20 @@ export function BeyondWork() {
 
           {/* Photo grid */}
           <div className="grid grid-cols-2 gap-4">
-            <PhotoPlaceholder label={locale === "en" ? "Family" : "Družina"} delay={0.2} inView={inView} />
-            <PhotoPlaceholder label={locale === "en" ? "With my child" : "Z otrokom"} delay={0.3} inView={inView} />
+            <Photo src="/father.jpeg" alt="Family" delay={0.2} inView={inView} />
+            <Photo src="/father2.jpeg" alt="With my child" delay={0.3} inView={inView} />
           </div>
         </div>
 
         {/* Hobbies */}
+        <motion.p
+          className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-teal"
+          initial={{ opacity: 0, y: 12 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, ease: EASE, delay: 0.2 }}
+        >
+          {locale === "en" ? "Hobbies & interests" : "Hobiji in interesi"}
+        </motion.p>
         <div className="mb-20 grid grid-cols-2 gap-5 md:grid-cols-4">
           {t.beyondWork.hobbies.map((hobby, i) => (
             <motion.div
@@ -137,67 +132,11 @@ export function BeyondWork() {
         </div>
 
         {/* Photo row */}
-        <div className="mb-20 grid grid-cols-3 gap-4">
-          <PhotoPlaceholder label={locale === "en" ? "Badminton" : "Badminton"} delay={0.4} inView={inView} />
-          <PhotoPlaceholder label={locale === "en" ? "Piano" : "Klavir"} delay={0.5} inView={inView} />
-          <PhotoPlaceholder label={locale === "en" ? "Adventures" : "Pustolovščine"} delay={0.6} inView={inView} />
+        <div className="grid grid-cols-3 gap-4">
+          <Photo src="/badminton.jpeg" alt="Badminton" delay={0.4} inView={inView} />
+          <Photo src="/piano.jpeg" alt="Piano" delay={0.5} inView={inView} />
+          <Photo src="/hiking.jpeg" alt="Hiking adventures" delay={0.6} inView={inView} />
         </div>
-
-        {/* Slovenia 3000 */}
-        <motion.div
-          className="overflow-hidden rounded-2xl border border-border"
-          style={{
-            background: "linear-gradient(135deg, rgba(79,207,192,0.06) 0%, rgba(240,76,92,0.04) 100%)",
-          }}
-          initial={{ opacity: 0, y: 32 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.5 }}
-        >
-          <div className="grid grid-cols-1 items-center gap-8 p-8 md:grid-cols-[1fr_1.2fr] md:p-10">
-            {/* Text */}
-            <div>
-              <span className="mb-3 inline-block rounded-full border border-indigo/25 bg-indigo/8 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-indigo">
-                {locale === "en" ? "Side project" : "Stranski projekt"}
-              </span>
-              <h3 className="mb-4 text-2xl font-bold tracking-tight text-text md:text-3xl">
-                {t.beyondWork.slovenia3000.title[locale]}
-              </h3>
-              <p className="mb-6 text-sm leading-relaxed text-text-dim">
-                {t.beyondWork.slovenia3000.desc[locale]}
-              </p>
-              <a
-                href={t.beyondWork.slovenia3000.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-teal/30 bg-teal/8 px-5 py-2.5 text-sm font-medium text-teal transition-all hover:bg-teal/15 hover:scale-[1.02]"
-              >
-                {locale === "en" ? "Visit slovenia3000.si" : "Obišči slovenia3000.si"}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </a>
-            </div>
-
-            {/* Screenshot placeholder */}
-            <div
-              className="flex aspect-video items-center justify-center rounded-xl border border-border"
-              style={{
-                background: "linear-gradient(135deg, rgba(79,207,192,0.04) 0%, rgba(240,76,92,0.03) 100%)",
-              }}
-            >
-              <div className="flex flex-col items-center gap-2">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" className="text-text-muted/30">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-text-muted/40">
-                  slovenia3000.si
-                </span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

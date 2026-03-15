@@ -94,15 +94,22 @@ export function LoadingScreen() {
           />
 
           <div className="relative z-10 flex flex-col items-center gap-10 px-6 text-center">
-            {/* Monogram mark */}
+            {/* Logos row */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+              className="flex items-center gap-4"
             >
               <div className="flex h-[52px] w-[52px] items-center justify-center rounded-lg border border-teal/50 bg-teal/8 font-sans text-lg font-semibold tracking-wide text-teal shadow-[0_0_24px_rgba(79,207,192,0.2)]">
                 LZ
               </div>
+              <div className="h-6 w-px bg-teal/20" />
+              <img
+                src="/amcham-logo-white.svg"
+                alt="AmCham"
+                className="h-8 w-auto opacity-70"
+              />
             </motion.div>
 
             {/* Typewriter line */}

@@ -91,14 +91,14 @@ export function ImpactMetrics() {
   })
 
   const metrics = [
-    { value: 2, label: t.metrics.companies[locale], isNumeric: true, suffix: "" },
+    { value: 4, label: t.metrics.companies[locale], isNumeric: true, suffix: "" },
     { value: 10, label: t.metrics.years[locale], isNumeric: true, suffix: "+" },
-    { value: "Global", label: t.metrics.products[locale], isNumeric: false },
-    { value: "CASSINI", label: t.metrics.cassini[locale], isNumeric: false },
+    { value: 15, label: locale === "en" ? "People I lead" : "Ljudi, ki jih vodim", isNumeric: true, suffix: "+" },
+    { value: 6, label: locale === "en" ? "Awards won" : "Prejetih nagrad", isNumeric: true, suffix: "" },
   ]
 
   return (
-    <section ref={ref} className="w-full py-24">
+    <section ref={ref} className="w-full py-14">
       <div className="max-w-5xl mx-auto px-6">
         {/* Eyebrow */}
         <motion.div

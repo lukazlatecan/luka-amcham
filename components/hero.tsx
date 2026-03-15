@@ -41,7 +41,7 @@ export function Hero() {
     >
       {/* Main content */}
       <motion.div
-        className="relative z-10 flex max-w-4xl flex-col items-center gap-7 px-6 text-center"
+        className="relative z-10 flex max-w-4xl flex-col items-center gap-7 px-6 pt-6 text-center sm:pt-0"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -58,37 +58,29 @@ export function Hero() {
         </motion.div>
 
         {/* AmCham badge */}
-        <motion.div variants={itemVariants} className="flex items-center gap-3">
-          <img src="/amcham-logo-white.svg" alt="AmCham Slovenia" className="h-7 object-contain" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-muted/60">
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+          <img src="/amcham-logo-white.svg" alt="AmCham Slovenia" className="h-8 w-auto object-contain sm:h-10" />
+          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-text-muted sm:text-[13px]">
             Young Top Potential 2026
           </span>
         </motion.div>
 
-        {/* Company logos */}
-        <motion.div variants={itemVariants} className="flex items-center gap-6">
+        {/* Company logos + roles */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-3 sm:flex-row">
           <div
-            className="flex h-10 items-center justify-center rounded-xl px-4"
+            className="flex h-14 items-center gap-4 rounded-xl px-6"
             style={{ background: "rgba(79,207,192,0.08)", border: "1px solid rgba(79,207,192,0.2)" }}
           >
-            <img src="/spaceguardian-logo.png" alt="SpaceGuardian" className="h-6 object-contain" />
+            <img src="/spaceguardian-logo.png" alt="SpaceGuardian" className="h-8 w-auto max-w-[110px] object-contain" />
+            <span className="shrink-0 font-mono text-[12px] uppercase tracking-[0.15em] text-teal/85">CEO</span>
           </div>
-          <span className="text-text-muted/40 text-lg font-light">×</span>
+          <span className="hidden shrink-0 text-text-muted/40 text-lg font-light sm:block">×</span>
           <div
-            className="flex h-10 items-center justify-center rounded-xl px-4"
+            className="flex h-14 items-center gap-4 rounded-xl px-6"
             style={{ background: "rgba(240,76,92,0.08)", border: "1px solid rgba(240,76,92,0.2)" }}
           >
-            <img src="/indigo-logo-white.png" alt="Indigo Labs" className="h-5 object-contain" />
-          </div>
-        </motion.div>
-
-        {/* Badge pill */}
-        <motion.div variants={itemVariants}>
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-teal/35 bg-teal/8 px-4 py-1.5 backdrop-blur-sm">
-            <span className="inline-block h-[7px] w-[7px] rounded-full bg-teal shadow-[0_0_10px_#4fcfc0]" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-teal/85">
-              CEO SpaceGuardian · CTO Indigo Labs
-            </span>
+            <img src="/indigo-logo-white.png" alt="Indigo Labs" className="h-7 w-auto max-w-[100px] object-contain" />
+            <span className="shrink-0 font-mono text-[12px] uppercase tracking-[0.15em] text-coral/85">CTO</span>
           </div>
         </motion.div>
 

@@ -11,11 +11,8 @@ import { Timeline } from "@/components/timeline"
 import { HowILead } from "@/components/how-i-lead"
 import { Testimonials } from "@/components/testimonials"
 import { Endorsements } from "@/components/endorsements"
-import { WhyAmCham } from "@/components/why-amcham"
-import { FirstYearPlan } from "@/components/first-year-plan"
-import { VideoSection } from "@/components/video-section"
+import { AmChamSection } from "@/components/amcham-section"
 import { BeyondWork } from "@/components/beyond-work"
-import { PersonalNote } from "@/components/personal-note"
 import { FinalCTA } from "@/components/final-cta"
 import { StarField } from "@/components/star-field"
 
@@ -27,19 +24,16 @@ export default function Page() {
       <Navbar />
       <main>
         <Hero />
-        <ImpactMetrics />
         <CoreNarrative />
+        <ImpactMetrics />
         <WhatIBuild />
         <Timeline />
         <HowILead />
         <Testimonials />
         <Endorsements />
-        <WhyAmCham />
-        <FirstYearPlan />
-        <VideoSection />
+        <AmChamSection />
         <BeyondWork />
-        <PersonalNote />
-        <FinalCTA />
+<FinalCTA />
       </main>
     </LanguageProvider>
   )

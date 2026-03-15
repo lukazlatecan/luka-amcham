@@ -31,7 +31,7 @@ export function FinalCTA() {
     <section
       id="contact"
       ref={ref}
-      className="relative overflow-hidden px-6 py-40"
+      className="relative overflow-hidden px-6 py-20"
     >
       {/* Orbital rings */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -102,11 +102,19 @@ export function FinalCTA() {
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="mb-12 text-5xl font-bold tracking-tight text-text md:text-6xl"
+          className="mb-6 text-5xl font-bold tracking-tight text-text md:text-6xl"
           style={{ textShadow: "0 0 60px rgba(79,207,192,0.2)" }}
         >
           {t.cta.title[locale]}
         </motion.h2>
+
+        {/* Quote */}
+        <motion.p
+          variants={fadeUp}
+          className="mb-10 text-base italic leading-relaxed text-text-muted"
+        >
+          &ldquo;{t.personal.text[locale]}&rdquo;
+        </motion.p>
 
         {/* CTA Buttons */}
         <motion.div

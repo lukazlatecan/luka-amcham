@@ -2,137 +2,32 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { t, useLocale } from "@/lib/i18n"
+import { useLocale } from "@/lib/i18n"
 
-/* ── SVG Icons ─────────────────────────────────────────────────────────── */
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
-function IconSystems() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="3" stroke="#f04c5c" strokeWidth="1.5" />
-      <circle cx="4" cy="4" r="2" stroke="#4fcfc0" strokeWidth="1.5" />
-      <circle cx="20" cy="4" r="2" stroke="#4fcfc0" strokeWidth="1.5" />
-      <circle cx="4" cy="20" r="2" stroke="#4fcfc0" strokeWidth="1.5" />
-      <circle cx="20" cy="20" r="2" stroke="#4fcfc0" strokeWidth="1.5" />
-      <line x1="5.5" y1="5.5" x2="10" y2="10" stroke="#f04c5c" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="18.5" y1="5.5" x2="14" y2="10" stroke="#f04c5c" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="5.5" y1="18.5" x2="10" y2="14" stroke="#f04c5c" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="18.5" y1="18.5" x2="14" y2="14" stroke="#f04c5c" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function IconOwnership() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="7" r="3" stroke="#4fcfc0" strokeWidth="1.5" />
-      <path
-        d="M5 18c0-3 2.5-5.5 7-5.5s7 2.5 7 5.5"
-        stroke="#f04c5c"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path d="M12 17v3" stroke="#4fcfc0" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M10 19h4" stroke="#4fcfc0" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function IconLongTerm() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <polyline
-        points="3,18 7,13 11,15 16,9 21,5"
-        stroke="#f04c5c"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <polyline
-        points="17,5 21,5 21,9"
-        stroke="#4fcfc0"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function IconClarity() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M9 18h6M10 21h4M12 3a6 6 0 014 10.5V16H8v-2.5A6 6 0 0112 3z"
-        stroke="#f04c5c"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path d="M12 3v1" stroke="#4fcfc0" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-const icons = [
-  <IconSystems key="s" />,
-  <IconOwnership key="o" />,
-  <IconLongTerm key="l" />,
-  <IconClarity key="c" />,
+const photos = [
+  { src: "/talk1.jpeg", alt: "Conference talk 1" },
+  { src: "/talk2.jpeg", alt: "Conference talk 2" },
+  { src: "/talk3.jpeg", alt: "Conference talk 3" },
+  { src: "/talk4.jpeg", alt: "Conference talk 4" },
 ]
-
-/* ── Card ──────────────────────────────────────────────────────────────── */
-
-function LeadCard({
-  card,
-  index,
-  locale,
-  inView,
-}: {
-  card: (typeof t.lead.cards)[number]
-  index: number
-  locale: "en" | "sl"
-  inView: boolean
-}) {
-  return (
-    <motion.div
-      className="group relative overflow-hidden rounded-xl border border-border bg-surface p-6 transition-all hover:border-border-hover"
-      initial={{ opacity: 0, y: 32 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
-      transition={{ duration: 0.6, delay: 0.1 + index * 0.12, ease: "easeOut" }}
-      style={{ borderLeft: "3px solid rgba(79,207,192,0.4)" }}
-    >
-      {/* number badge */}
-      <div className="absolute right-5 top-5 font-mono text-xs text-text-muted">
-        0{index + 1}
-      </div>
-
-      {/* icon */}
-      <div className="mb-4 inline-flex items-center justify-center rounded-lg border border-indigo-dim bg-indigo-dim p-2.5">
-        {icons[index]}
-      </div>
-
-      {/* title */}
-      <h3 className="text-base font-semibold text-text">
-        {card.title[locale]}
-      </h3>
-
-      {/* desc */}
-      <p className="mt-2 text-sm text-text-dim">
-        {card.desc[locale]}
-      </p>
-    </motion.div>
-  )
-}
-
-/* ── Section ───────────────────────────────────────────────────────────── */
 
 export function HowILead() {
   const { locale } = useLocale()
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
 
+  const title = locale === "en" ? "Stepping on stage" : "Na oder"
+  const badge = locale === "en" ? "Public speaking" : "Javno nastopanje"
+  const body1 = locale === "en"
+    ? "Public speaking has been one of my biggest out-of-comfort-zone challenges. I had always built things behind screens and let the work speak for itself. Standing in front of an audience and owning the room felt like a different kind of skill entirely."
+    : "Javno nastopanje je bil eden mojih največjih izzivov iz cone udobja. Vedno sem gradil stvari za zasloni in pustil, da delo govori samo zase. Stati pred občinstvom in prevzeti prostor se je zdelo povsem drugačna veščina."
+  const body2 = locale === "en"
+    ? "I spoke at several conferences on topics ranging from AI in product development to sustainable space infrastructure. Each time I walked off stage, I understood something new about communication, clarity and conviction."
+    : "Nastopil sem na več konferencah na teme od umetne inteligence v razvoju produktov do trajnostne vesoljske infrastrukture. Vsakič ko sem stopil s odra, sem razumel kaj novega o komunikaciji, jasnosti in prepričljivosti."
+
   return (
-    <section id="leadership" ref={ref} className="relative py-28">
+    <section id="leadership" ref={ref} className="relative py-14">
       <div className="mx-auto max-w-5xl px-6">
         {/* heading */}
         <motion.div
@@ -142,24 +37,40 @@ export function HowILead() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-teal">
-            Leadership
+            {badge}
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
-            {t.lead.title[locale]}
+            {title}
           </h2>
         </motion.div>
 
-        {/* 2x2 grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {t.lead.cards.map((card, i) => (
-            <LeadCard
-              key={i}
-              card={card}
-              index={i}
-              locale={locale}
-              inView={inView}
-            />
-          ))}
+        {/* text + photo grid */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+          {/* left: text */}
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
+            className="flex flex-col gap-5"
+          >
+            <p className="text-lg leading-relaxed text-text-dim">{body1}</p>
+            <p className="text-base leading-relaxed text-text-muted">{body2}</p>
+          </motion.div>
+
+          {/* right: 2x2 photo grid */}
+          <div className="grid grid-cols-2 gap-3">
+            {photos.map((photo, i) => (
+              <motion.div
+                key={i}
+                className="aspect-[4/3] overflow-hidden rounded-xl border border-border"
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, ease: EASE, delay: 0.2 + i * 0.1 }}
+              >
+                <img src={photo.src} alt={photo.alt} className="h-full w-full object-cover" />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

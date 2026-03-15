@@ -13,9 +13,12 @@ interface BuildCardProps {
   variant: "indigo" | "space"
   index: number
   inView: boolean
+  teamPhoto: string
+  url: string
+  visitLabel: string
 }
 
-function BuildCard({ tag, company, headline, p1, p2, variant, index, inView }: BuildCardProps) {
+function BuildCard({ tag, company, headline, p1, p2, variant, index, inView, teamPhoto, url, visitLabel }: BuildCardProps) {
   const isIndigo = variant === "indigo"
   const accentColor = isIndigo ? "#f04c5c" : "#4fcfc0"
   const accentRgba = isIndigo ? "rgba(240,76,92," : "rgba(79,207,192,"
@@ -25,45 +28,70 @@ function BuildCard({ tag, company, headline, p1, p2, variant, index, inView }: B
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
-      className="flex-1 border border-border rounded-2xl p-8 hover:border-border-hover transition-all"
+      className="flex flex-1 flex-col border border-border rounded-2xl overflow-hidden hover:border-border-hover transition-all"
       style={{
         borderTop: `3px solid ${accentColor}`,
         background: `linear-gradient(180deg, ${accentRgba}0.04) 0%, rgba(255,255,255,0.03) 100%)`,
       }}
     >
-      {/* Header row with logo */}
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <img
-            src={isIndigo ? "/indigo-logo-white.png" : "/spaceguardian-logo.png"}
-            alt={company}
-            className="h-7 object-contain"
-          />
+      <div className="flex-1 p-8 pb-6">
+        {/* Header row with logo */}
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <img
+              src={isIndigo ? "/indigo-logo-white.png" : "/spaceguardian-logo.png"}
+              alt={company}
+              className="h-7 object-contain"
+            />
+          </div>
+          <span
+            className="shrink-0 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-widest"
+            style={{
+              borderColor: `${accentRgba}0.3)`,
+              background: `${accentRgba}0.1)`,
+              color: accentColor,
+            }}
+          >
+            {tag}
+          </span>
         </div>
-        <span
-          className="shrink-0 rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-widest"
+
+        {/* Headline */}
+        <p className="mt-4 text-base font-semibold text-text-dim">
+          {headline}
+        </p>
+
+        {/* Body */}
+        <p className="mt-4 text-sm leading-relaxed text-text-muted">
+          {p1}
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-text-muted">
+          {p2}
+        </p>
+
+        {/* Visit button */}
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium transition-all hover:scale-[1.02]"
           style={{
             borderColor: `${accentRgba}0.3)`,
-            background: `${accentRgba}0.1)`,
+            background: `${accentRgba}0.08)`,
             color: accentColor,
           }}
         >
-          {tag}
-        </span>
+          {visitLabel}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
       </div>
 
-      {/* Headline */}
-      <p className="mt-4 text-base font-semibold text-text-dim">
-        {headline}
-      </p>
-
-      {/* Body */}
-      <p className="mt-4 text-sm leading-relaxed text-text-muted">
-        {p1}
-      </p>
-      <p className="mt-3 text-sm leading-relaxed text-text-muted">
-        {p2}
-      </p>
+      {/* Team photo */}
+      <div className="aspect-video w-full overflow-hidden">
+        <img src={teamPhoto} alt={`${company} team`} className="h-full w-full object-cover" />
+      </div>
     </motion.div>
   )
 }
@@ -80,7 +108,7 @@ export function WhatIBuild() {
     <section
       ref={ref}
       id="companies"
-      className="w-full py-28"
+      className="w-full py-14"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Eyebrow */}
@@ -106,6 +134,9 @@ export function WhatIBuild() {
             p2={t.build.indigo.p2[locale]}
             index={0}
             inView={inView}
+            teamPhoto="/indigolabsteam.jpeg"
+            url="https://indigo.si"
+            visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
           />
           <BuildCard
             variant="space"
@@ -116,6 +147,9 @@ export function WhatIBuild() {
             p2={t.build.space.p2[locale]}
             index={1}
             inView={inView}
+            teamPhoto="/spaceguardianteam.jpeg"
+            url="https://spaceguardian.eu"
+            visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
           />
         </div>
       </div>

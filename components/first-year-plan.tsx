@@ -88,7 +88,7 @@ export function FirstYearPlan() {
   return (
     <section
       ref={ref}
-      className="px-6 py-32"
+      className="px-6 py-16"
     >
       <div className="mx-auto max-w-4xl">
         {/* Section header */}
