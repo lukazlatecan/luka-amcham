@@ -14,8 +14,8 @@ const links: NavLink[] = [
   { labelKey: "companies", href: "#companies" },
   { labelKey: "leadership", href: "#leadership" },
   { labelKey: "testimonials", href: "#testimonials" },
-  { labelKey: "beyond", href: "#beyond" },
   { labelKey: "amcham", href: "#amcham" },
+  { labelKey: "beyond", href: "#beyond" },
   { labelKey: "contact", href: "#contact" },
 ]
 
