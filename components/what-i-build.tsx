@@ -176,7 +176,7 @@ function BuildCard({
 
         {/* EUSPA Mentorship */}
         {!isIndigo && (
-          <div className="mt-5 flex items-center gap-4 rounded-xl border border-white/8 bg-white/3 px-4 py-3">
+          <div className="mt-5 flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
             <img
               src="/euspa.png"
               alt="EUSPA"
@@ -193,7 +193,7 @@ function BuildCard({
 
         {/* Microsoft Partner */}
         {isIndigo && (
-          <div className="mt-5 flex items-center gap-4 rounded-xl border border-white/8 bg-white/3 px-4 py-3">
+          <div className="mt-5 flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
             <img
               src="/microsoft-partner.png"
               alt="Microsoft Partner"
