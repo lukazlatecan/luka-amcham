@@ -186,7 +186,7 @@ function BuildCard({
             <p className="text-xs leading-relaxed text-text-muted">
               {locale === "en"
                 ? "SpaceGuardian is part of the EUSPA mentorship program, receiving guidance from the EU Agency for the Space Programme as we develop our autonomous collision-avoidance infrastructure."
-                : "SpaceGuardian je del mentorskega programa EUSPA in prejema vodstvo Agencije EU za vesoljski program med razvojem naše avtonomne infrastrukture za izogibanje trkom."}
+                : "SpaceGuardian je del mentorskega programa agencije EUSPA, ki nas podpira pri razvoju avtonomne infrastrukture za izogibanje trkom v vesolju."}
             </p>
           </div>
         )}
@@ -203,7 +203,7 @@ function BuildCard({
             <p className="text-xs leading-relaxed text-text-muted">
               {locale === "en"
                 ? "Indigo Labs is a certified Microsoft Partner, bringing enterprise-grade cloud infrastructure, AI tooling, and Microsoft ecosystem expertise to every product we build."
-                : "Indigo Labs je certificiran Microsoft Partner, ki v vsak produkt prinaša enterprise-grade oblačno infrastrukturo, AI orodja in strokovno znanje Microsoftovega ekosistema."}
+                : "Indigo Labs je certificiran Microsoft Partner. V vsak produkt prinašamo industrijsko oblačno infrastrukturo, AI orodja in globoko poznavanje Microsoftovega ekosistema."}
             </p>
           </div>
         )}
