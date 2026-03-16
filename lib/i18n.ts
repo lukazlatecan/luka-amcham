@@ -34,7 +34,7 @@ export const t = {
   metrics: {
     title: { en: "In numbers", sl: "V številkah" },
     companies: { en: "Companies co-founded", sl: "Soustanovljena podjetja" },
-    years: { en: "Years in software", sl: "Let v programski opremi" },
+    years: { en: "Years in software", sl: "Let izkušenj v razvoju" },
   },
   narrative: {
     title: {
@@ -43,7 +43,7 @@ export const t = {
     },
     p1: {
       en: "My career has been driven by one question: how do we turn advanced technology into real-world impact?",
-      sl: "Mojo kariero poganja eno vprašanje: kako napredno tehnologijo spremenimo v resničen vpliv?",
+      sl: "Mojo kariero poganja eno vprašanje: kako napredno tehnologijo pretvorimo v resničen vpliv?",
     },
     p2: {
       en: "From building high-performing product teams at Indigo Labs to developing autonomous collision-avoidance infrastructure at SpaceGuardian, my focus is always the same: align people, technology and vision into scalable systems.",
@@ -74,7 +74,7 @@ export const t = {
       tag: { en: "IoT · AgriTech", sl: "IoT · AgriTech" },
       desc: {
         en: "Wireless precision irrigation automation platform that optimizes water usage and crop yields through sensor-based control powered by solar energy.",
-        sl: "Brezžična platforma za natančno avtomatizacijo namakanja, ki optimizira porabo vode in pridelek z merjenjem na osnovi senzorjev.",
+        sl: "Brezžična platforma za natančno avtomatizacijo namakanja, ki optimizira porabo vode in pridelek s pomočjo senzorjev.",
       },
     },
   },
@@ -98,11 +98,11 @@ export const t = {
       tag: { en: "CEO", sl: "CEO" },
       title: {
         en: "Making space sustainable through autonomous decision systems.",
-        sl: "Trajnostno vesolje skozi avtonomne odločitvene sisteme.",
+        sl: "Vesolje naredimo trajnostno skozi avtonomne odločitvene sisteme.",
       },
       p1: {
         en: "Space is becoming the next critical infrastructure layer for our society. At SpaceGuardian we are developing AI-driven coordination that enables satellites to avoid collisions automatically and fairly, using a bidding system where operators negotiate right-of-way in real time.",
-        sl: "Vesolje postaja naslednja kritična infrastrukturna plast naše družbe. Pri SpaceGuardian razvijamo AI-vodeno koordinacijo, ki satelitom omogoča avtomatsko in pošteno izogibanje trkom, s sistemom licitiranja, kjer operaterji v realnem času pogajajo prednostni prehod.",
+        sl: "Vesolje postaja naslednja kritična infrastrukturna plast naše družbe. Pri SpaceGuardian razvijamo AI-vodeno koordinacijo, ki satelitom omogoča avtomatsko in pošteno izogibanje trkom, s sistemom licitiranja, kjer operaterji v realnem času pogajajo prioriteto.",
       },
       p2: {
         en: "Our vision is clear: a safe, scalable and economically sustainable orbit.",
@@ -246,7 +246,7 @@ export const t = {
     introLabel: { en: "How it started", sl: "Kako se je začelo" },
     intro: {
       en: "I joined AmCham with Indigo Labs in 2025 and quickly found my way into AmCham Young. The community, the conversations, and the energy of people who are genuinely trying to move things forward. It has been one of the most valuable environments I have been part of. I've included a video from when it all started.",
-      sl: "Z Indigo Labs sem se pridružil AmCham leta 2025 in se kmalu vključil v AmCham Young. Skupnost, pogovori in energija ljudi, ki resnično želijo premikati stvari naprej. To je eno najbolj dragocenih okolij, katerih del sem bil. Ta video dodajam kot spomin na začetek.",
+      sl: "Z Indigo Labs sem se pridružil AmCham leta 2025 in se kmalu vključil v AmCham Young. Skupnost, pogovori in energija ljudi, ki resnično želijo premikati stvari naprej. To je eno najbolj dragocenih okolij, katerih del sem bil. Prilagam video iz teh začetkov.",
     },
     contributionsLabel: {
       en: "Where I see my role",
@@ -258,7 +258,7 @@ export const t = {
     },
     snowballDesc: {
       en: "Slovenia3000 is something I started with a few friends, a small platform for long-term national thinking beyond political cycles. It is early and still finding its shape, but I would love to bring it into Snowball's conversations as one possible step toward giving this kind of thinking a more structured digital home.",
-      sl: "Slovenija 3000 sem začel z nekaj prijatelji, majhna platforma za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Je zgodnja in še išče svojo obliko, a jo bi rad vnesel v pogovore Snowball kot en možen korak k temu, da bi tovrstno razmišljanje dobilo bolj strukturirano digitalno prisotnost.",
+      sl: "Slovenija 3000 sem začel z nekaj prijatelji, majhna platforma za dolgoročno nacionalno razmišljanje onkraj političnih ciklov. Je zgodnja in še išče svojo obliko, in jo bi rad vnesel v pogovore Snowball kot en možen korak k temu, da bi tovrstno razmišljanje dobilo bolj strukturirano digitalno prisotnost.",
     },
     ready4dBadge: { en: "Advocacy", sl: "Zagovorništvo" },
     ready4dDesc: {
@@ -271,7 +271,7 @@ export const t = {
     },
     delegationDesc: {
       en: "I was part of Startup Overseas 2025: Colorado, USA. Seeing how much preparation determines the outcome, I want to help early-stage startups make the most of these delegations: know their story before they land, understand the market context, be ready to pitch to a local audience, and leave with a follow-up plan that has real outcomes attached.",
-      sl: "Bil sem del Startup Overseas 2025: Kolorado, ZDA. Ker sem videl, kako odločilna je priprava, želim startupom pomagati izkoristiti delegacije: poznati svojo zgodbo pred pristakom, razumeti tržni kontekst, biti pripravljeni na nastop pred lokalnim občinstvom in imeti načrt nadaljnjih korakov z jasnimi rezultati.",
+      sl: "Bil sem del Startup Overseas 2025: Kolorado, ZDA. Ker sem videl, kako odločilna je priprava, želim startupom pomagati izkoristiti delegacije: poznati svojo zgodbo pred pristakom, razumeti tržni kontekst, biti pripravljeni za predstavitev pred lokalnim trgom in imeti načrt nadaljnjih korakov z jasnimi rezultati.",
     },
     mentorBadge: { en: "AmCham YOUng", sl: "AmCham YOUng" },
     mentorDesc: {
