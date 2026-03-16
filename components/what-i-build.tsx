@@ -4,6 +4,93 @@ import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { t, useLocale } from "@/lib/i18n"
 
+function YCBadge() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 rounded-sm">
+      <path d="M47.9985 47.9994H0V8.61853e-07H47.9985V47.9994Z" fill="#FF6600"/>
+      <path d="M13.9012 11.7843H17.6595L22.4961 21.5325C23.203 22.9836 23.7984 24.3976 23.7984 24.3976C23.7984 24.3976 24.4313 23.021 25.175 21.5325L30.0868 11.7843H33.5843L25.2865 27.3746V37.309H22.1244V27.1884L13.9012 11.7843Z" fill="white"/>
+    </svg>
+  )
+}
+
+interface ProjectCardProps {
+  logo: string
+  company: string
+  tag: string
+  desc: string
+  url: string
+  visitLabel: string
+  isYC?: boolean
+  invertLogo?: boolean
+  index: number
+  inView: boolean
+}
+
+function ProjectCard({
+  logo,
+  company,
+  tag,
+  desc,
+  url,
+  visitLabel,
+  isYC,
+  invertLogo,
+  index,
+  inView,
+}: ProjectCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{
+        duration: 0.6,
+        ease: [0.16, 1, 0.3, 1],
+        delay: 0.2 + index * 0.12,
+      }}
+      className="flex flex-1 flex-col overflow-hidden rounded-2xl border border-border p-6 transition-all hover:border-border-hover"
+      style={{
+        background: "rgba(255,255,255,0.03)",
+      }}
+    >
+      {/* Header */}
+      <div className="flex items-start justify-between gap-3">
+        <img src={logo} alt={company} className="h-7 object-contain" style={invertLogo ? { filter: "brightness(0) invert(1)" } : undefined} />
+        {isYC && <YCBadge />}
+      </div>
+
+      {/* Tag */}
+      <span className="mt-4 inline-block w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold tracking-widest text-text-muted uppercase">
+        {tag}
+      </span>
+
+      {/* Description */}
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-text-muted">{desc}</p>
+
+      {/* Visit button */}
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 inline-flex w-fit items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-text-dim transition-all hover:scale-[1.02] hover:border-white/20"
+      >
+        {visitLabel}
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M7 17L17 7M17 7H7M17 7v10" />
+        </svg>
+      </a>
+    </motion.div>
+  )
+}
+
 interface BuildCardProps {
   tag: string
   company: string
@@ -176,6 +263,55 @@ export function WhatIBuild() {
               locale === "en" ? "Visit website" : "Obišči spletno stran"
             }
           />
+        </div>
+
+        {/* Projects subsection */}
+        <div className="mt-12">
+          <motion.span
+            initial={{ opacity: 0, y: -8 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mb-8 inline-block rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-bold tracking-widest text-text-muted uppercase"
+          >
+            {t.projects.eyebrow[locale]}
+          </motion.span>
+
+          <div className="flex flex-col gap-5 sm:flex-row">
+            <ProjectCard
+              logo="/benson.svg"
+              company="Benson"
+              tag={t.projects.benson.tag[locale]}
+              desc={t.projects.benson.desc[locale]}
+              url="https://www.meetbenson.com/"
+              visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
+              isYC
+              index={0}
+              inView={inView}
+            />
+            <ProjectCard
+              logo="/realroots.svg"
+              company="RealRoots"
+              tag={t.projects.realroots.tag[locale]}
+              desc={t.projects.realroots.desc[locale]}
+              url="https://www.therealroots.com/"
+              visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
+              isYC
+              invertLogo
+              index={1}
+              inView={inView}
+            />
+            <ProjectCard
+              logo="/irriot.png"
+              company="Irriot"
+              invertLogo
+              tag={t.projects.irriot.tag[locale]}
+              desc={t.projects.irriot.desc[locale]}
+              url="https://www.irriot.com/"
+              visitLabel={locale === "en" ? "Visit website" : "Obišči spletno stran"}
+              index={2}
+              inView={inView}
+            />
+          </div>
         </div>
       </div>
     </section>

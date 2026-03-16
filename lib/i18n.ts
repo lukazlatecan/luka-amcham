@@ -54,6 +54,30 @@ export const t = {
       sl: "Najboljši sem tam, kjer se srečajo inženirstvo, poslovanje in vodenje.",
     },
   },
+  projects: {
+    eyebrow: { en: "Projects I've built", sl: "Projekti, ki sem jih zgradil" },
+    benson: {
+      tag: { en: "AI · Investing", sl: "AI · Investiranje" },
+      desc: {
+        en: "AI-powered investing assistant that automatically identifies and invests in top-performing stocks, allowing users to build wealth without financial expertise.",
+        sl: "AI asistent za investiranje, ki samodejno identificira in vlaga v najboljše delnice, tako da uporabniki gradijo premoženje brez finančnega znanja.",
+      },
+    },
+    realroots: {
+      tag: { en: "Social · Community", sl: "Socialno · Skupnost" },
+      desc: {
+        en: "Friend-matching service that connects women through guided, curated experiences and structured social activities designed to foster meaningful friendships.",
+        sl: "Storitev za iskanje prijateljev, ki povezuje ženske prek vodenih, prilagojenih izkušenj in strukturiranih socialnih aktivnosti.",
+      },
+    },
+    irriot: {
+      tag: { en: "IoT · AgriTech", sl: "IoT · AgriTech" },
+      desc: {
+        en: "Wireless precision irrigation automation platform that optimizes water usage and crop yields through sensor-based control powered by solar energy.",
+        sl: "Brezžična platforma za natančno avtomatizacijo namakanja, ki optimizira porabo vode in pridelek z merjenjem na osnovi senzorjev.",
+      },
+    },
+  },
   build: {
     indigo: {
       tag: { en: "CTO", sl: "CTO" },
