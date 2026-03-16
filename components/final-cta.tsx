@@ -98,7 +98,7 @@ export function FinalCTA() {
         {/* Badge */}
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
           <span className="inline-block rounded-full border border-teal/25 bg-teal/10 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-teal uppercase">
-            Contact
+            {locale === "en" ? "Contact" : "Kontakt"}
           </span>
         </motion.div>
 

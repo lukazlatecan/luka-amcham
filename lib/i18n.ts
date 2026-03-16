@@ -361,7 +361,7 @@ export const t = {
     journey: { en: "The Story", sl: "Zgodba" },
     companies: { en: "What I Build", sl: "Kaj gradim" },
     leadership: { en: "On Stage", sl: "Na odru" },
-    testimonials: { en: "Perspectives", sl: "Perspektive" },
+    testimonials: { en: "Testimonials", sl: "Mnenja" },
     beyond: { en: "Personal", sl: "Osebno" },
     amcham: { en: "AmCham", sl: "AmCham" },
     contact: { en: "Contact", sl: "Kontakt" },

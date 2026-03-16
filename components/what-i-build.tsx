@@ -6,10 +6,12 @@ import { t, useLocale } from "@/lib/i18n"
 
 function YCBadge() {
   return (
-    <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 rounded-sm">
-      <path d="M47.9985 47.9994H0V8.61853e-07H47.9985V47.9994Z" fill="#FF6600"/>
-      <path d="M13.9012 11.7843H17.6595L22.4961 21.5325C23.203 22.9836 23.7984 24.3976 23.7984 24.3976C23.7984 24.3976 24.4313 23.021 25.175 21.5325L30.0868 11.7843H33.5843L25.2865 27.3746V37.309H22.1244V27.1884L13.9012 11.7843Z" fill="white"/>
-    </svg>
+    <img
+      src="/ycombinator-ar21.svg"
+      alt="Y Combinator"
+      className="shrink-0 h-10 object-contain"
+      style={{ width: "auto" }}
+    />
   )
 }
 
@@ -103,6 +105,7 @@ interface BuildCardProps {
   teamPhoto: string
   url: string
   visitLabel: string
+  locale: "en" | "sl"
 }
 
 function BuildCard({
@@ -117,6 +120,7 @@ function BuildCard({
   teamPhoto,
   url,
   visitLabel,
+  locale,
 }: BuildCardProps) {
   const isIndigo = variant === "indigo"
   const accentColor = isIndigo ? "#f04c5c" : "#4fcfc0"
@@ -137,7 +141,7 @@ function BuildCard({
         background: `linear-gradient(180deg, ${accentRgba}0.04) 0%, rgba(255,255,255,0.03) 100%)`,
       }}
     >
-      <div className="flex-1 p-8 pb-6">
+      <div className="flex flex-1 flex-col p-8 pb-6">
         {/* Header row with logo */}
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -165,15 +169,51 @@ function BuildCard({
         <p className="mt-4 text-base font-semibold text-text-dim">{headline}</p>
 
         {/* Body */}
-        <p className="mt-4 text-sm leading-relaxed text-text-muted">{p1}</p>
-        <p className="mt-3 text-sm leading-relaxed text-text-muted">{p2}</p>
+        <div className="flex-1">
+          <p className="mt-4 text-sm leading-relaxed text-text-muted">{p1}</p>
+          <p className="mt-3 text-sm leading-relaxed text-text-muted">{p2}</p>
+        </div>
+
+        {/* EUSPA Mentorship */}
+        {!isIndigo && (
+          <div className="mt-5 flex items-center gap-4 rounded-xl border border-white/8 bg-white/3 px-4 py-3">
+            <img
+              src="/euspa.png"
+              alt="EUSPA"
+              className="h-14 shrink-0 object-contain"
+              style={{ width: "auto" }}
+            />
+            <p className="text-xs leading-relaxed text-text-muted">
+              {locale === "en"
+                ? "SpaceGuardian is part of the EUSPA mentorship program, receiving guidance from the EU Agency for the Space Programme as we develop our autonomous collision-avoidance infrastructure."
+                : "SpaceGuardian je del mentorskega programa EUSPA in prejema vodstvo Agencije EU za vesoljski program med razvojem naše avtonomne infrastrukture za izogibanje trkom."}
+            </p>
+          </div>
+        )}
+
+        {/* Microsoft Partner */}
+        {isIndigo && (
+          <div className="mt-5 flex items-center gap-4 rounded-xl border border-white/8 bg-white/3 px-4 py-3">
+            <img
+              src="/microsoft-partner.png"
+              alt="Microsoft Partner"
+              className="h-14 shrink-0 object-contain"
+              style={{ width: "auto" }}
+            />
+            <p className="text-xs leading-relaxed text-text-muted">
+              {locale === "en"
+                ? "Indigo Labs is a certified Microsoft Partner, bringing enterprise-grade cloud infrastructure, AI tooling, and Microsoft ecosystem expertise to every product we build."
+                : "Indigo Labs je certificiran Microsoft Partner, ki v vsak produkt prinaša enterprise-grade oblačno infrastrukturo, AI orodja in strokovno znanje Microsoftovega ekosistema."}
+            </p>
+          </div>
+        )}
 
         {/* Visit button */}
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium transition-all hover:scale-[1.02]"
+          className="mt-6 inline-flex self-start items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium transition-all hover:scale-[1.02]"
           style={{
             borderColor: `${accentRgba}0.3)`,
             background: `${accentRgba}0.08)`,
@@ -244,6 +284,7 @@ export function WhatIBuild() {
             inView={inView}
             teamPhoto="/indigolabsteam.jpeg"
             url="https://indigo.si"
+            locale={locale}
             visitLabel={
               locale === "en" ? "Visit website" : "Obišči spletno stran"
             }
@@ -259,6 +300,7 @@ export function WhatIBuild() {
             inView={inView}
             teamPhoto="/spaceguardianteam.jpeg"
             url="https://spaceguardian.eu"
+            locale={locale}
             visitLabel={
               locale === "en" ? "Visit website" : "Obišči spletno stran"
             }

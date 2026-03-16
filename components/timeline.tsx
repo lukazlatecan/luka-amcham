@@ -132,7 +132,7 @@ export function Timeline() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <span className="mb-3 inline-block rounded-full border border-teal/30 bg-teal/5 px-3 py-1 text-xs font-bold tracking-widest text-teal uppercase">
-            Timeline
+            {locale === "en" ? "Timeline" : "Časovnica"}
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
             {t.timeline.title[locale]}
